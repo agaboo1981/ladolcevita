@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - La Dolce Vita</title>
+    <meta name="description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
+    <meta property="og:title" content="La Dolce Vita - Authentic Italian Cuisine">
+    <meta property="og:description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="social-sidebar">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                La Dolce Vita
+            </div>
+            <ul>
+                <li><a href="index.html#home" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="index.html#about">Our Story</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="reservations.html" class="btn-reservations">Book a Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Order Online</h1>
+                <p>Fresh Italian flavors delivered to your door.</p>
+            </div>
+        </section>
+
+        <section class="order-page">
+            <div class="container">
+                <div class="order-grid">
+                    <div class="order-menu">
+                        <div class="order-category">
+                            <h3>Popular Dishes</h3>
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <h4>Tagliatelle al Tartufo <i class="fas fa-leaf" title="Vegetarian"></i></h4>
+                                    <p>Homemade pasta, black truffle cream.</p>
+                                    <span class="price">$24</span>
+                                </div>
+                                <button class="btn-add" aria-label="Add Tagliatelle al Tartufo to Order">Add to Order</button>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <h4>Lasagna alla Bolognese</h4>
+                                    <p>Layers of pasta, meat ragu, mozzarella.</p>
+                                    <span class="price">$22</span>
+                                </div>
+                                <button class="btn-add" aria-label="Add Lasagna alla Bolognese to Order">Add to Order</button>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <h4>Pizza Margherita <i class="fas fa-leaf" title="Vegetarian"></i></h4>
+                                    <p>Fresh tomato sauce, mozzarella, basil.</p>
+                                    <span class="price">$18</span>
+                                </div>
+                                <button class="btn-add" aria-label="Add Pizza Margherita to Order">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <h3>Your Order</h3>
+                        <div class="cart-items">
+                            <p class="empty-msg">Your cart is currently empty.</p>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span>$0.00</span>
+                        </div>
+                        <button class="btn-primary full-width" onclick="location.href='success.html'" aria-label="Proceed to Checkout">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 La Dolce Vita. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
+</body>
+</html>
