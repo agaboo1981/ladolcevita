@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — La Dolce Vita</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to La Dolce Vita.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">
+                <i class="fas fa-utensils nav__logo-icon"></i>
+                La Dolce Vita
+            </a>
+            <div class="nav__links">
+                <a href="index.html" class="nav__link">Experience</a>
+                <a href="menu.html" class="nav__link">Menu</a>
+                <a href="gallery.html" class="nav__link">Gallery</a>
+                <a href="order.html" class="nav__link">Order</a>
+                <a href="reservations.html" class="nav__link nav__cta">Reserve</a>
+            </div>
+            <button class="nav__toggle" aria-label="Open menu">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-menu__link">Experience</a>
+        <a href="menu.html" class="mobile-menu__link">Menu</a>
+        <a href="gallery.html" class="mobile-menu__link">Gallery</a>
+        <a href="order.html" class="mobile-menu__link">Order</a>
+        <a href="reservations.html" class="mobile-menu__link">Reserve</a>
+    </div>
+
+    <main id="main">
+        <section class="not-found">
+            <div class="container">
+                <div class="not-found__content">
+                    <div class="not-found__number">404</div>
+                    <h1>Something's Not Quite Right</h1>
+                    <p>The page you're looking for seems to have wandered off the menu. Let us guide you back to something delicious.</p>
+                    <div class="not-found__actions">
+                        <a href="index.html" class="btn btn--primary">Back to Home</a>
+                        <a href="menu.html" class="btn btn--ghost">View the Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__top">
+                <div class="site-footer__brand">
+                    <a href="index.html" class="nav__logo" style="color: var(--text-inverse);">
+                        <i class="fas fa-utensils nav__logo-icon"></i>
+                        La Dolce Vita
+                    </a>
+                    <p>Authentic Italian cuisine since 1985.</p>
+                </div>
+                <div>
+                    <h4 class="site-footer__heading">Navigate</h4>
+                    <div class="site-footer__links">
+                        <a href="index.html" class="site-footer__link">Experience</a>
+                        <a href="menu.html" class="site-footer__link">Menu</a>
+                        <a href="gallery.html" class="site-footer__link">Gallery</a>
+                        <a href="order.html" class="site-footer__link">Order Online</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="site-footer__heading">Hours</h4>
+                    <div class="site-footer__links">
+                        <span class="site-footer__link">Tue-Thu: 5pm-10pm</span>
+                        <span class="site-footer__link">Fri-Sat: 5pm-11pm</span>
+                        <span class="site-footer__link">Sun: 4pm-9pm</span>
+                        <span class="site-footer__link">Mon: Closed</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="site-footer__heading">Newsletter</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Seasonal specials and exclusive events.</p>
+                    <form class="site-footer__newsletter-form">
+                        <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
+                <div class="site-footer__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
