@@ -578,7 +578,7 @@ const registerServiceWorker = () => {
             return;
         }
 
-        navigator.serviceWorker.register('/sw.js').catch(() => {
+        navigator.serviceWorker.register('sw.js', { scope: './' }).catch(() => {
             // Service worker registration is optional.
         });
     });

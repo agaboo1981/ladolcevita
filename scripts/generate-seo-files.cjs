@@ -2,11 +2,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const rootDir = path.resolve(__dirname, '..');
+const DEFAULT_SITE_URL = 'https://ladolcevita-seven.vercel.app';
 
 const normalizeSiteUrl = (value) => {
   const trimmed = String(value || '').trim();
   if (!trimmed) {
-    return 'https://example.com';
+    return DEFAULT_SITE_URL;
   }
 
   return trimmed.replace(/\/+$/, '');
@@ -52,8 +53,8 @@ const robotsTxt = [
 fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), sitemapXml, 'utf8');
 fs.writeFileSync(path.join(rootDir, 'robots.txt'), robotsTxt, 'utf8');
 
-if (siteUrl === 'https://example.com') {
-  console.warn('SEO files generated with default SITE_URL=https://example.com. Set SITE_URL for deployment.');
+if (siteUrl === DEFAULT_SITE_URL) {
+  console.log(`SEO files generated for default SITE_URL=${DEFAULT_SITE_URL}`);
 } else {
   console.log(`SEO files generated for ${siteUrl}`);
 }
