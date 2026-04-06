@@ -48,7 +48,7 @@ self.addEventListener('fetch', (event) => {
   // Skip external API calls
   if (event.request.url.includes('/api/')) return;
 
-  // Handle Images (Unsplash, etc.)
+  // Handle remote image requests
   if (event.request.destination === 'image') {
     event.respondWith(
       caches.open(IMAGE_CACHE_NAME).then((cache) => {

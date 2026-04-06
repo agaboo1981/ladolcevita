@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout — La Dolce Vita</title>
+    <title>Checkout - La Dolce Vita</title>
     <meta name="description" content="Complete your order at La Dolce Vita.">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%9D%3C/text%3E%3C/svg%3E">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -28,7 +29,7 @@
                 <a href="order.html" class="nav__link nav__link--active">Order</a>
                 <a href="reservations.html" class="nav__link nav__cta">Reserve</a>
             </div>
-            <button class="nav__toggle" aria-label="Open menu">
+            <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
@@ -36,7 +37,7 @@
         </nav>
     </header>
 
-    <div class="mobile-menu">
+    <div id="mobile-menu" class="mobile-menu">
         <a href="index.html" class="mobile-menu__link">Experience</a>
         <a href="menu.html" class="mobile-menu__link">Menu</a>
         <a href="order.html" class="mobile-menu__link">Order</a>
@@ -46,13 +47,13 @@
     <main id="main">
         <section class="page-hero">
             <div class="page-hero__bg">
-                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1920&q=80" alt="Checkout" loading="eager" fetchpriority="high">
+                <img src="https://images.pexels.com/photos/17761082/pexels-photo-17761082.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max" alt="Checkout" loading="eager">
             </div>
             <div class="page-hero__overlay"></div>
             <div class="page-hero__content">
                 <span class="label">Checkout</span>
                 <h1>Complete Your Order</h1>
-                <p>Secure payment powered by Stripe.</p>
+                <p>Secure checkout flow with Stripe-ready demo mode.</p>
             </div>
         </section>
 
@@ -109,7 +110,7 @@
 
                         <button type="submit" class="btn btn--primary btn--full btn--lg" id="submit-checkout">
                             <span class="btn-text">Pay Now</span>
-                            <span class="btn-loading" style="display:none;">Processing...</span>
+                            <span class="btn-loading">Processing...</span>
                         </button>
                     </form>
                 </div>
@@ -128,3 +129,4 @@
     <script type="module" src="js/checkout.js"></script>
 </body>
 </html>
+

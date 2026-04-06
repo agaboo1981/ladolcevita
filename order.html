@@ -7,7 +7,7 @@
     <meta name="description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
     <meta property="og:title" content="La Dolce Vita - Authentic Italian Cuisine">
     <meta property="og:description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:image" content="https://images.pexels.com/photos/34994568/pexels-photo-34994568.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +17,9 @@
 <body>
 
     <div class="social-sidebar">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
     </div>
 
     <header>
@@ -37,8 +37,21 @@
                 <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="reservations.html" class="btn-reservations">Book a Table</a></li>
             </ul>
+            <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
         </nav>
     </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html#home" class="mobile-menu__link">Home</a>
+        <a href="menu.html" class="mobile-menu__link">Menu</a>
+        <a href="gallery.html" class="mobile-menu__link">Gallery</a>
+        <a href="order.html" class="mobile-menu__link">Order</a>
+        <a href="reservations.html" class="mobile-menu__link">Reserve</a>
+    </div>
 
     <main>
         <section class="page-header">
@@ -90,7 +103,7 @@
                             <span>Total:</span>
                             <span>$0.00</span>
                         </div>
-                        <button class="btn-primary full-width" onclick="location.href='success.html'" aria-label="Proceed to Checkout">Checkout</button>
+                        <button id="checkout-btn" type="button" class="btn-primary full-width" aria-label="Proceed to Checkout">Checkout</button>
                     </div>
                 </div>
             </div>
@@ -100,9 +113,9 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
             </div>
             <p>&copy; 2026 La Dolce Vita. All rights reserved.</p>
         </div>
@@ -112,3 +125,4 @@
     <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 </body>
 </html>
+

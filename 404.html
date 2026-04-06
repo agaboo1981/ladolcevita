@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found — La Dolce Vita</title>
+    <title>Page Not Found - La Dolce Vita</title>
     <meta name="description" content="The page you're looking for doesn't exist. Return to La Dolce Vita.">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%9D%3C/text%3E%3C/svg%3E">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -28,7 +29,7 @@
                 <a href="order.html" class="nav__link">Order</a>
                 <a href="reservations.html" class="nav__link nav__cta">Reserve</a>
             </div>
-            <button class="nav__toggle" aria-label="Open menu">
+            <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
                 <span class="nav__toggle-line"></span>
@@ -36,7 +37,7 @@
         </nav>
     </header>
 
-    <div class="mobile-menu">
+    <div id="mobile-menu" class="mobile-menu">
         <a href="index.html" class="mobile-menu__link">Experience</a>
         <a href="menu.html" class="mobile-menu__link">Menu</a>
         <a href="gallery.html" class="mobile-menu__link">Gallery</a>
@@ -64,7 +65,7 @@
         <div class="container">
             <div class="site-footer__top">
                 <div class="site-footer__brand">
-                    <a href="index.html" class="nav__logo" style="color: var(--text-inverse);">
+                    <a href="index.html" class="nav__logo site-footer__brand-logo--inverse">
                         <i class="fas fa-utensils nav__logo-icon"></i>
                         La Dolce Vita
                     </a>
@@ -90,7 +91,7 @@
                 </div>
                 <div>
                     <h4 class="site-footer__heading">Newsletter</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Seasonal specials and exclusive events.</p>
+                    <p class="site-footer__note">Seasonal specials and exclusive events.</p>
                     <form class="site-footer__newsletter-form">
                         <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
                         <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
@@ -100,9 +101,9 @@
             <div class="site-footer__bottom">
                 <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
                 <div class="site-footer__social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                 </div>
             </div>
         </div>
@@ -111,3 +112,4 @@
     <script type="module" src="js/script.js"></script>
 </body>
 </html>
+
