@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="preloader"><i class="fas fa-utensils loader-icon"></i></div>
@@ -60,14 +60,49 @@
                     <source src="https://assets.mixkit.co/videos/preview/mixkit-chef-preparing-a-pizza-in-the-kitchen-4291-large.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="hero-content">
-                <span class="text-primary">Since 1985</span>
-                <h1>The Art of Italian <span class="text-primary italic serif">Soul</span></h1>
-                <p>An immersive culinary journey through the heart of Tuscany.</p>
-                <div class="hero-btns">
-                    <a href="menu.html" class="btn-primary">View Menu</a>
-                    <a href="reservations.html" class="btn-secondary">Book a Table</a>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <span class="eyebrow">Riverside, since 1985</span>
+                    <h1>La Dolce Vita</h1>
+                    <p class="hero-subtitle">A Tuscan dining salon where candlelight, vintages, and handmade pasta turn evenings into rituals.</p>
+                    <div class="hero-btns">
+                        <a href="reservations.html" class="btn-primary">Reserve a Table</a>
+                        <a href="menu.html" class="btn-secondary">Explore the Menu</a>
+                    </div>
+                    <div class="hero-meta">
+                        <div>
+                            <span class="meta-label">Hours</span>
+                            <span class="meta-value">Tue-Sun, 5pm-10pm</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Dress Code</span>
+                            <span class="meta-value">Elegant casual</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Private Dining</span>
+                            <span class="meta-value">Up to 30 guests</span>
+                        </div>
+                    </div>
+                    <div class="hero-awards">
+                        <span>Michelin Guide 2025</span>
+                        <span>Wine Spectator Award</span>
+                        <span>Gambero Rosso 2 Forks</span>
+                    </div>
                 </div>
+                <aside class="hero-card">
+                    <span class="card-eyebrow">Chef's Experience</span>
+                    <h3>Seasonal Tasting Journey</h3>
+                    <p>Five or seven courses curated nightly with estate wines and regional specialties.</p>
+                    <ul class="card-list">
+                        <li>Sommelier pairing available</li>
+                        <li>Vegetarian tasting on request</li>
+                        <li>Anniversary packages</li>
+                    </ul>
+                    <div class="card-actions">
+                        <a href="reservations.html" class="btn-primary">Reserve</a>
+                        <a href="index.html#about" class="btn-tertiary">Our Story</a>
+                    </div>
+                </aside>
             </div>
         </section>
 
@@ -203,23 +238,46 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <div class="newsletter-section">
-                <h3>Join our Newsletter</h3>
-                <p>Stay updated with our seasonal specials and events.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn-primary">Subscribe</button>
-                </form>
-            </div>
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <div class="site-footer__top">
+                <div class="site-footer__brand">
+                    <div class="site-footer__logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>La Dolce Vita</span>
+                    </div>
+                    <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
+                    <div class="site-footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
                 </div>
-                <p>&copy; 2026 La Dolce Vita. All rights reserved.</p>
+                <div class="site-footer__col">
+                    <h4>Visit</h4>
+                    <p>123 Via Roma, Culinary District, City</p>
+                    <p>(555) 123-4567</p>
+                    <p>Tue-Sun: 5pm - 10pm</p>
+                </div>
+                <div class="site-footer__col">
+                    <h4>Explore</h4>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="reservations.html">Reservations</a>
+                    <a href="order.html">Order Online</a>
+                </div>
+                <div class="site-footer__col">
+                    <h4>Newsletter</h4>
+                    <p>Seasonal specials and chef events.</p>
+                    <form class="site-footer__form newsletter-form">
+                        <input type="email" placeholder="Email address" required aria-label="Email address">
+                        <button type="submit" class="btn-primary">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
+                <span class="site-footer__note">Valet parking available on request.</span>
             </div>
         </div>
     </footer>

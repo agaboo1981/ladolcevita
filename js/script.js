@@ -37,6 +37,36 @@ const API_BASE = getApiBase();
 const apiUrl = (path) => `${API_BASE}${path}`;
 const isLocalDevelopment = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 
+const bindZoomGuards = () => {
+    let lastTouchEnd = 0;
+
+    ['gesturestart', 'gesturechange', 'gestureend'].forEach((eventName) => {
+        document.addEventListener(eventName, (event) => {
+            event.preventDefault();
+        }, { passive: false });
+    });
+
+    document.addEventListener('touchmove', (event) => {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    }, { passive: false });
+
+    document.addEventListener('touchend', (event) => {
+        const now = Date.now();
+        if (now - lastTouchEnd <= 280) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, { passive: false });
+
+    document.addEventListener('wheel', (event) => {
+        if (event.ctrlKey || event.metaKey) {
+            event.preventDefault();
+        }
+    }, { passive: false });
+};
+
 const getCart = () => {
     try {
         const parsed = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '[]');
@@ -181,6 +211,30 @@ const bindMenuFiltering = () => {
             });
         });
     });
+};
+
+const bindFooterReveal = () => {
+    const footer = document.querySelector('.site-footer');
+    if (!footer) {
+        return;
+    }
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+        footer.classList.add('is-visible');
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                footer.classList.add('is-visible');
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(footer);
 };
 
 const bindPreloader = () => {
@@ -585,11 +639,14 @@ const registerServiceWorker = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    bindZoomGuards();
+
     bindAnchorScrolling();
     bindScrollAnimations();
     bindBackToTop();
     bindGalleryLightbox();
     bindMenuFiltering();
+    bindFooterReveal();
     bindPreloader();
     bindCustomCursor();
     bindHeaderScroll();

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
                 La Dolce Vita
             </div>
             <ul>
-                <li><a href="index.html#home" class="active">Home</a></li>
+                <li><a href="index.html#home">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="order.html">Order Online</a></li>
@@ -48,9 +48,9 @@
     </div>
 
     <main>
-        <section class="success-page">
+        <section class="success-page success-page--prestige">
             <div class="container">
-                <div class="success-content">
+                <div class="success-content success-card">
                     <div class="success-icon">&#10003;</div>
                     <h1 id="success-title">Grazie Mille!</h1>
                     <p id="success-message">Your request has been received. We will contact you shortly to confirm your details.</p>
@@ -61,14 +61,47 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__top">
+                <div class="site-footer__brand">
+                    <div class="site-footer__logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>La Dolce Vita</span>
+                    </div>
+                    <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
+                    <div class="site-footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="site-footer__col">
+                    <h4>Visit</h4>
+                    <p>123 Via Roma, Culinary District, City</p>
+                    <p>(555) 123-4567</p>
+                    <p>Tue-Sun: 5pm - 10pm</p>
+                </div>
+                <div class="site-footer__col">
+                    <h4>Explore</h4>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="reservations.html">Reservations</a>
+                    <a href="order.html">Order Online</a>
+                </div>
+                <div class="site-footer__col">
+                    <h4>Newsletter</h4>
+                    <p>Seasonal specials and chef events.</p>
+                    <form class="site-footer__form newsletter-form">
+                        <input type="email" placeholder="Email address" required aria-label="Email address">
+                        <button type="submit" class="btn-primary">Join</button>
+                    </form>
+                </div>
             </div>
-            <p>&copy; 2026 La Dolce Vita. All rights reserved.</p>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
+                <span class="site-footer__note">Valet parking available on request.</span>
+            </div>
         </div>
     </footer>
 
