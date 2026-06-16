@@ -4,178 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - La Dolce Vita</title>
-    <meta name="description" content="Complete your order at La Dolce Vita.">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%9D%3C/text%3E%3C/svg%3E">
-    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Complete your order at La Dolce Vita. Secure payment and white-glove delivery.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://js.stripe.com/v3/" defer></script>
+    <style>
+        .checkout-flow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .checkout-summary {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(197, 160, 89, 0.08);
+            padding: 40px;
+            position: sticky;
+            top: 120px;
+        }
+        .checkout-summary h3, .checkout-form h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-transform: none;
+        }
+        .checkout-total {
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            border-top: 1px solid rgba(197, 160, 89, 0.15);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .checkout-divider {
+            border-top: 1px solid rgba(197, 160, 89, 0.08);
+            margin: 40px 0;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .stripe-element {
+            background: var(--bg-primary);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            padding: 16px 20px;
+            margin-bottom: 15px;
+            min-height: 44px;
+        }
+        .card-errors {
+            color: #e53e3e;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+        .btn--full { width: 100%; }
+        .btn--lg { padding: 18px 36px; }
+        .btn-loading { display: none; }
+        @media (max-width: 768px) {
+            .checkout-flow { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+    <div id="preloader"><i class="fas fa-utensils loader-icon"></i></div>
+    <div class="custom-cursor" id="custom-cursor"></div>
 
-    <header class="site-header">
-        <nav class="nav">
-            <a href="index.html" class="nav__logo">
-                <i class="fas fa-utensils nav__logo-icon"></i>
+    <!-- Header Navigation -->
+    <header id="navbar">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i>
                 La Dolce Vita
             </a>
-            <div class="nav__links">
-                <a href="index.html" class="nav__link">Experience</a>
-                <a href="menu.html" class="nav__link">Menu</a>
-                <a href="order.html" class="nav__link nav__link--active">Order</a>
-                <a href="reservations.html" class="nav__link nav__cta">Reserve</a>
-            </div>
-            <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-            </button>
+            <ul>
+                <li><a href="index.html#home">Experience</a></li>
+                <li><a href="menu.html">The Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="reservations.html" class="btn-reservations">Reserve</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="index.html" class="mobile-menu__link">Experience</a>
-        <a href="menu.html" class="mobile-menu__link">Menu</a>
-        <a href="order.html" class="mobile-menu__link">Order</a>
-        <a href="reservations.html" class="mobile-menu__link">Reserve</a>
-    </div>
+    <!-- Subpage Hero -->
+    <header class="subpage-hero">
+        <div class="container">
+            <span class="subpage-kicker">Pagamento</span>
+            <h1 class="subpage-title">COMPLETE YOUR ORDER</h1>
+            <p style="max-width: 600px; margin: 0 auto; opacity: 0.8;">White-glove delivery confirmed with the kitchen before departure.</p>
+        </div>
+    </header>
 
-    <main id="main">
-        <section class="page-hero">
-            <div class="page-hero__bg">
-                <img src="https://images.pexels.com/photos/17761082/pexels-photo-17761082.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max" alt="Checkout" loading="eager">
-            </div>
-            <div class="page-hero__overlay"></div>
-            <div class="page-hero__content">
-                <span class="label">Delivery & Checkout</span>
-                <h1>Complete Your Order</h1>
-                <p>Finalize your delivery details and confirm your meal with secure payment.</p>
-            </div>
-        </section>
-
-        <section class="section intro-section">
-            <div class="container intro-grid">
-                <div>
-                    <span class="eyebrow">Assistance</span>
-                    <h2>White-glove delivery care</h2>
-                    <p class="section-lead">Our team confirms every order with the kitchen before departure. If you need help, call (555) 123-4567.</p>
+    <main id="main" class="container" style="padding: 100px 40px;">
+        <div class="checkout-flow">
+            <div class="checkout-summary">
+                <h3>Order Summary</h3>
+                <div id="checkout-items"></div>
+                <div class="checkout-total">
+                    <span>Total</span>
+                    <span id="checkout-total-amount">$0.00</span>
                 </div>
-                <div class="info-card">
-                    <h3>Before You Submit</h3>
-                    <ul class="info-list">
-                        <li>Delivery windows update nightly</li>
-                        <li>Allergies are reviewed by the chef</li>
-                        <li>Wine pairings require ID on delivery</li>
+            </div>
+
+            <form id="checkout-form" class="checkout-form">
+                <h3>Delivery Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkout-name">Full Name</label>
+                        <input type="text" id="checkout-name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-phone">Phone</label>
+                        <input type="tel" id="checkout-phone" required placeholder="(555) 123-4567">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-address">Delivery Address</label>
+                    <input type="text" id="checkout-address" required placeholder="Street address">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkout-city">City</label>
+                        <input type="text" id="checkout-city" required placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-zip">ZIP Code</label>
+                        <input type="text" id="checkout-zip" required placeholder="00000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-notes">Special Instructions</label>
+                    <textarea id="checkout-notes" rows="3" placeholder="Allergies, delivery instructions..."></textarea>
+                </div>
+
+                <div class="checkout-divider"></div>
+
+                <h3>Payment</h3>
+                <div id="stripe-element" class="stripe-element">
+                    <!-- Stripe Card Element mounts here -->
+                </div>
+                <div id="card-errors" class="card-errors" role="alert"></div>
+
+                <button type="submit" class="btn-primary btn--full btn--lg" id="submit-checkout">
+                    <span class="btn-text">Pay Now</span>
+                    <span class="btn-loading">Processing...</span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">La Dolce Vita</a>
+                    <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Visit</h4>
+                    <p>123 Via Roma, Culinary District</p>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html" class="footer-link">The Menu</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="reservations.html" class="footer-link">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Online Orders</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html" class="footer-link">Order Online</a></li>
+                        <li><a href="checkout.html" class="footer-link">Checkout</a></li>
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="container container--narrow">
-                <div class="checkout-flow">
-                    <div class="checkout-summary">
-                        <h3>Order Summary</h3>
-                        <div id="checkout-items"></div>
-                        <div class="checkout-total">
-                            <span>Total</span>
-                            <span id="checkout-total-amount">$0.00</span>
-                        </div>
-                    </div>
-
-                    <form id="checkout-form" class="checkout-form">
-                        <h3>Delivery Details</h3>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="checkout-name">Full Name</label>
-                                <input type="text" id="checkout-name" required placeholder="Your name">
-                            </div>
-                            <div class="form-group">
-                                <label for="checkout-phone">Phone</label>
-                                <input type="tel" id="checkout-phone" required placeholder="(555) 123-4567">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="checkout-address">Delivery Address</label>
-                            <input type="text" id="checkout-address" required placeholder="Street address">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="checkout-city">City</label>
-                                <input type="text" id="checkout-city" required placeholder="City">
-                            </div>
-                            <div class="form-group">
-                                <label for="checkout-zip">ZIP Code</label>
-                                <input type="text" id="checkout-zip" required placeholder="00000">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="checkout-notes">Special Instructions</label>
-                            <textarea id="checkout-notes" rows="3" placeholder="Allergies, delivery instructions..."></textarea>
-                        </div>
-
-                        <div class="checkout-divider"></div>
-
-                        <h3>Payment</h3>
-                        <div id="stripe-element" class="stripe-element">
-                            <!-- Stripe Card Element mounts here -->
-                        </div>
-                        <div id="card-errors" class="card-errors" role="alert"></div>
-
-                        <button type="submit" class="btn btn--primary btn--full btn--lg" id="submit-checkout">
-                            <span class="btn-text">Pay Now</span>
-                            <span class="btn-loading">Processing...</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="site-footer__top">
-                <div class="site-footer__brand">
-                    <div class="site-footer__logo">
-                        <i class="fas fa-utensils"></i>
-                        <span>La Dolce Vita</span>
-                    </div>
-                    <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
-                    <div class="site-footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="site-footer__col">
-                    <h4>Visit</h4>
-                    <p>123 Via Roma, Culinary District, City</p>
-                    <p>(555) 123-4567</p>
-                    <p>Tue-Sun: 5pm - 10pm</p>
-                </div>
-                <div class="site-footer__col">
-                    <h4>Explore</h4>
-                    <a href="menu.html">Menu</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="reservations.html">Reservations</a>
-                    <a href="order.html">Order Online</a>
-                </div>
-                <div class="site-footer__col">
-                    <h4>Newsletter</h4>
-                    <p>Seasonal specials and chef events.</p>
-                    <form class="site-footer__form newsletter-form">
-                        <input type="email" placeholder="Email address" required aria-label="Email address">
-                        <button type="submit" class="btn-primary">Join</button>
-                    </form>
-                </div>
-            </div>
-            <div class="site-footer__bottom">
-                <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
-                <span class="site-footer__note">Valet parking available on request.</span>
+            <div class="footer-legal">
+                <span>&copy; 2026 La Dolce Vita. All rights reserved.</span>
+                <span>Valet parking available. Elegant Casual dress code.</span>
             </div>
         </div>
     </footer>
@@ -183,4 +195,3 @@
     <script type="module" src="js/checkout.js"></script>
 </body>
 </html>
-

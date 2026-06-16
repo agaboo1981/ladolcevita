@@ -5,47 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success - La Dolce Vita</title>
     <meta name="description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:title" content="La Dolce Vita - Authentic Italian Cuisine">
-    <meta property="og:description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:image" content="https://images.pexels.com/photos/34994568/pexels-photo-34994568.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="preloader"><i class="fas fa-utensils loader-icon"></i></div>
+    <div class="custom-cursor" id="custom-cursor"></div>
 
-    <header>
+    <header id="navbar">
         <nav>
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <i class="fas fa-utensils"></i>
                 La Dolce Vita
-            </div>
+            </a>
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#home">Experience</a></li>
+                <li><a href="menu.html">The Menu</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="order.html">Order Online</a></li>
-                <li><a href="index.html#about">Our Story</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="reservations.html" class="btn-reservations">Book a Table</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="reservations.html" class="btn-reservations">Reserve</a></li>
             </ul>
-            <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-            </button>
         </nav>
     </header>
-
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="index.html#home" class="mobile-menu__link">Home</a>
-        <a href="menu.html" class="mobile-menu__link">Menu</a>
-        <a href="gallery.html" class="mobile-menu__link">Gallery</a>
-        <a href="order.html" class="mobile-menu__link">Order</a>
-        <a href="reservations.html" class="mobile-menu__link">Reserve</a>
-    </div>
 
     <main>
         <section class="success-page success-page--prestige">
@@ -61,52 +42,41 @@
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="footer">
         <div class="container">
-            <div class="site-footer__top">
-                <div class="site-footer__brand">
-                    <div class="site-footer__logo">
-                        <i class="fas fa-utensils"></i>
-                        <span>La Dolce Vita</span>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">La Dolce Vita</a>
                     <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
-                    <div class="site-footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                    </div>
                 </div>
-                <div class="site-footer__col">
+                <div class="footer-links-col">
                     <h4>Visit</h4>
-                    <p>123 Via Roma, Culinary District, City</p>
+                    <p>123 Via Roma, Culinary District</p>
                     <p>(555) 123-4567</p>
-                    <p>Tue-Sun: 5pm - 10pm</p>
                 </div>
-                <div class="site-footer__col">
+                <div class="footer-links-col">
                     <h4>Explore</h4>
-                    <a href="menu.html">Menu</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="reservations.html">Reservations</a>
-                    <a href="order.html">Order Online</a>
+                    <ul class="footer-links">
+                        <li><a href="menu.html" class="footer-link">The Menu</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="reservations.html" class="footer-link">Reservations</a></li>
+                    </ul>
                 </div>
-                <div class="site-footer__col">
-                    <h4>Newsletter</h4>
-                    <p>Seasonal specials and chef events.</p>
-                    <form class="site-footer__form newsletter-form">
-                        <input type="email" placeholder="Email address" required aria-label="Email address">
-                        <button type="submit" class="btn-primary">Join</button>
-                    </form>
+                <div class="footer-links-col">
+                    <h4>Online Orders</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html" class="footer-link">Order Online</a></li>
+                        <li><a href="checkout.html" class="footer-link">Checkout</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="site-footer__bottom">
-                <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
-                <span class="site-footer__note">Valet parking available on request.</span>
+            <div class="footer-legal">
+                <span>&copy; 2026 La Dolce Vita. All rights reserved.</span>
+                <span>Valet parking available. Elegant Casual dress code.</span>
             </div>
         </div>
     </footer>
 
     <script type="module" src="js/script.js"></script>
-    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 </body>
 </html>
-

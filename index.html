@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Dolce Vita - Authentic Italian Cuisine</title>
-    <meta name="description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:title" content="La Dolce Vita - Authentic Italian Cuisine">
-    <meta property="og:description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:image" content="https://images.pexels.com/photos/34994568/pexels-photo-34994568.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max">
+    <title>La Dolce Vita - 5-Star Michelin Dining Experience</title>
+    <meta name="description" content="Authentic Italian fine dining at La Dolce Vita. Handcrafted pasta, fine wines, and candlelit hospitality since 1985.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="preloader"><i class="fas fa-utensils loader-icon"></i></div>
-    <div class="custom-cursor"></div>
+    <div class="custom-cursor" id="custom-cursor"></div>
 
     <div class="social-sidebar">
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -24,50 +18,38 @@
         <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
     </div>
 
-    <header>
+    <!-- Header Navigation -->
+    <header id="navbar">
         <nav>
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <i class="fas fa-utensils"></i>
                 La Dolce Vita
-            </div>
+            </a>
             <ul>
                 <li><a href="index.html#home" class="active">Experience</a></li>
                 <li><a href="menu.html">The Menu</a></li>
-                <li><a href="index.html#about">Our Legacy</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="order.html">Order</a></li>
                 <li><a href="reservations.html" class="btn-reservations">Reserve</a></li>
             </ul>
-            <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-            </button>
         </nav>
     </header>
 
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="index.html#home" class="mobile-menu__link">Experience</a>
-        <a href="menu.html" class="mobile-menu__link">Menu</a>
-        <a href="gallery.html" class="mobile-menu__link">Gallery</a>
-        <a href="order.html" class="mobile-menu__link">Order</a>
-        <a href="reservations.html" class="mobile-menu__link">Reserve</a>
-    </div>
-
     <main>
+        <!-- 1. The Experience (Hero) -->
         <section id="home" class="hero">
             <div class="hero-video-container">
                 <div class="hero-overlay"></div>
-                <video autoplay muted loop poster="https://images.pexels.com/photos/3338535/pexels-photo-3338535.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-chef-preparing-a-pizza-in-the-kitchen-4291-large.mp4" type="video/mp4">
-                </video>
+                <img src="images/hero_dining.jpg" alt="La Dolce Vita Dining Room" class="hero-bg-img">
             </div>
             <div class="hero-inner">
                 <div class="hero-content">
-                    <span class="eyebrow">Riverside, since 1985</span>
+                    <span class="eyebrow">Tuscan Dining Salon, since 1985</span>
                     <h1>La Dolce Vita</h1>
-                    <p class="hero-subtitle">A Tuscan dining salon where candlelight, vintages, and handmade pasta turn evenings into rituals.</p>
+                    <p class="hero-subtitle">Where candlelight, estate vintages, and handmade pasta turn evenings into rituals.</p>
                     <div class="hero-btns">
                         <a href="reservations.html" class="btn-primary">Reserve a Table</a>
-                        <a href="menu.html" class="btn-secondary">Explore the Menu</a>
+                        <a href="menu.html" class="btn-secondary">Explore Menu</a>
                     </div>
                     <div class="hero-meta">
                         <div>
@@ -100,190 +82,112 @@
                     </ul>
                     <div class="card-actions">
                         <a href="reservations.html" class="btn-primary">Reserve</a>
-                        <a href="index.html#about" class="btn-tertiary">Our Story</a>
+                        <a href="index.html#about" class="btn-secondary">Our Story</a>
                     </div>
                 </aside>
             </div>
         </section>
 
+        <!-- 2. Our Legacy (About) -->
         <section id="about" class="about-section">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-text">
-                        <span class="text-primary serif italic">Our Legacy</span>
-                        <h2 class="quote">Crafted with Passion</h2>
-                        <p class="lead">Founded in 1985 by Chef Alessandro Rossi, La Dolce Vita brings the rustic charm of Tuscany to your table. We believe in fresh ingredients, slow cooking, and the joy of sharing a meal with loved ones.</p>
+                        <span class="italic">Our Legacy</span>
+                        <h2>Crafted with Passion</h2>
+                        <p class="lead">
+                            Founded in 1985 by Chef Alessandro Rossi, La Dolce Vita brings the rustic charm of Tuscany to your table. We believe in fresh ingredients, slow cooking, and the joy of sharing a meal with loved ones.
+                        </p>
                     </div>
                     <div class="about-image">
-                        <img src="https://images.pexels.com/photos/32742915/pexels-photo-32742915.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=max" alt="Chef Alessandro">
+                        <img src="images/chef_alessandro.jpg" alt="Chef Alessandro Rossi plating a gourmet dish">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- 3. Signature Highlights -->
         <section id="menu-highlights" class="highlights">
             <div class="container">
                 <h2 class="quote">Signature Delicacies</h2>
                 <div class="highlight-grid">
                     <div class="highlight-item">
-                        <img src="https://images.pexels.com/photos/28936956/pexels-photo-28936956.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=max" alt="Tagliatelle">
+                        <img src="images/truffle_pasta.jpg" alt="Tagliatelle al Tartufo">
                         <div class="item-text">
-                            <h4 class="serif-italic" >Tagliatelle al Tartufo</h4>
-                            <p class="lead">Homemade pasta with black truffle cream and aged parmesan. A masterpiece of earthy flavors.</p>
+                            <h4>Tagliatelle al Tartufo</h4>
+                            <p>Hand-rolled tagliatelle tossed in black truffle cream, shaved fresh Umbrian truffles, and 24-month aged Parmigiano-Reggiano.</p>
                         </div>
                     </div>
-                    <!-- ... -->
+                    <div class="highlight-item">
+                        <img src="images/tiramisu.jpg" alt="Deconstructed Tiramisu">
+                        <div class="item-text">
+                            <h4>Deconstructed Tiramisu</h4>
+                            <p>Espresso-soaked ladyfingers, whipped mascarpone quenelle, dusted cocoa powder, and dark chocolate shards garnished with gold leaf flakes.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- 4. Inside Our Kitchen -->
         <section class="kitchen-sneak-peek">
             <div class="container">
                 <h2>Inside Our Kitchen</h2>
                 <div class="kitchen-grid">
-                    <img src="https://images.pexels.com/photos/8629109/pexels-photo-8629109.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=max" alt="Kitchen Prep">
-                    <img src="https://images.pexels.com/photos/4253319/pexels-photo-4253319.jpeg?auto=compress&cs=tinysrgb&w=1200&fit=max" alt="Plating Dish">
+                    <img src="images/chef_line.jpg" alt="Chef Prep Line">
+                    <img src="images/plating_dish.jpg" alt="Plating Fine Dish">
                 </div>
             </div>
         </section>
 
-        <section id="testimonials" class="testimonials">
+        <!-- 5. Testimonials (Wine Cellar Backdrop) -->
+        <section id="testimonials" class="testimonials" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1200&auto=format&fit=crop');">
+            <div class="testimonials-overlay"></div>
             <div class="container">
-                <h2>What Our Guests Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <p>"The best pasta I've had outside of Italy. The Tagliatelle al Tartufo is a masterpiece!"</p>
-                        <cite>- Marco R.</cite>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <p>"Atmosphere is cozy and elegant. Perfect for our anniversary dinner."</p>
-                        <cite>- Sarah J.</cite>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <p>"Fantastic service and the Tiramisu is absolutely divine. A must-visit!"</p>
-                        <cite>- David L.</cite>
-                    </div>
+                <div class="testimonial-text">
+                    "The best pasta I've had outside of Italy. The Tagliatelle al Tartufo is a masterpiece of earthy flavors."
                 </div>
-            </div>
-        </section>
-
-        <section id="faq" class="faq">
-            <div class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3>Is there parking available?</h3>
-                        <p>Yes, we offer complimentary valet parking for all our guests during dinner hours. There is also a public parking garage just one block away.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Do you have a dress code?</h3>
-                        <p>We recommend smart casual attire. While we don't require jackets, we want our guests to feel comfortable in an elegant dining environment.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Can you accommodate dietary restrictions?</h3>
-                        <p>Absolutely! We offer gluten-free pasta options and our chefs are happy to adapt many dishes to accommodate allergies or vegan preferences.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Do you host private events?</h3>
-                        <p>Yes, we have a private dining room that can accommodate up to 30 guests. Please contact us for details.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Visit Us</h2>
-                <div class="contact-grid">
-                    <div class="contact-form-container">
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4" required placeholder="How can we help you?"></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                    <div class="contact-details">
-                        <div class="contact-info">
-                            <p><strong>Address:</strong> 123 Via Roma, Culinary District, City</p>
-                            <p><strong>Phone:</strong> (555) 123-4567</p>
-                            <p><strong>Hours:</strong> Tue-Sun: 5pm - 10pm (Closed Mondays)</p>
-                        </div>
-                        <div class="map-container">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153166!3d-37.81627977975124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne+VIC%2C+Australia!5e0!3m2!1sen!2sus!4v1544154415441" 
-                                title="Map showing La Dolce Vita location"
-                                width="100%" height="300" allowfullscreen="" loading="lazy">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
+                <div class="testimonial-author">— MARCO R. (MICHELIN CRITIC)</div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="site-footer__top">
-                <div class="site-footer__brand">
-                    <div class="site-footer__logo">
-                        <i class="fas fa-utensils"></i>
-                        <span>La Dolce Vita</span>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">La Dolce Vita</a>
                     <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
-                    <div class="site-footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                    </div>
                 </div>
-                <div class="site-footer__col">
+                <div class="footer-links-col">
                     <h4>Visit</h4>
-                    <p>123 Via Roma, Culinary District, City</p>
+                    <p>123 Via Roma, Culinary District</p>
                     <p>(555) 123-4567</p>
-                    <p>Tue-Sun: 5pm - 10pm</p>
                 </div>
-                <div class="site-footer__col">
+                <div class="footer-links-col">
                     <h4>Explore</h4>
-                    <a href="menu.html">Menu</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="reservations.html">Reservations</a>
-                    <a href="order.html">Order Online</a>
+                    <ul class="footer-links">
+                        <li><a href="menu.html" class="footer-link">The Menu</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="reservations.html" class="footer-link">Reservations</a></li>
+                    </ul>
                 </div>
-                <div class="site-footer__col">
-                    <h4>Newsletter</h4>
-                    <p>Seasonal specials and chef events.</p>
-                    <form class="site-footer__form newsletter-form">
-                        <input type="email" placeholder="Email address" required aria-label="Email address">
-                        <button type="submit" class="btn-primary">Join</button>
-                    </form>
+                <div class="footer-links-col">
+                    <h4>Online Orders</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html" class="footer-link">Order Online</a></li>
+                        <li><a href="checkout.html" class="footer-link">Checkout</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="site-footer__bottom">
-                <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
-                <span class="site-footer__note">Valet parking available on request.</span>
+            <div class="footer-legal">
+                <span>&copy; 2026 La Dolce Vita. All rights reserved.</span>
+                <span>Valet parking available. Elegant Casual dress code.</span>
             </div>
         </div>
     </footer>
 
     <script type="module" src="js/script.js"></script>
-    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 </body>
 </html>
-

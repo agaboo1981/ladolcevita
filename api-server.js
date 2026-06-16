@@ -49,6 +49,45 @@ app.use(cors({
 
 app.use(express.json({ limit: '1mb' }));
 
+// Simple In-Memory Rate Limiting
+const rateLimit = (limit, windowMs) => {
+  const ips = new Map();
+  return (req, res, next) => {
+    const ip = req.ip || req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    const now = Date.now();
+    const clientData = ips.get(ip) || { count: 0, resetTime: now + windowMs };
+
+    if (now > clientData.resetTime) {
+      clientData.count = 1;
+      clientData.resetTime = now + windowMs;
+    } else {
+      clientData.count += 1;
+    }
+
+    ips.set(ip, clientData);
+
+    if (clientData.count > limit) {
+      res.status(429).json({
+        success: false,
+        message: 'Too many requests. Please try again later.'
+      });
+      return;
+    }
+    next();
+  };
+};
+
+const apiLimiter = rateLimit(30, 60 * 1000); // 30 requests per minute per IP
+app.use('/api/', apiLimiter);
+
+// Secure Server-Side Menu Prices
+const MENU_PRICES = {
+  'tagliatelle-al-tartufo': 38.00,
+  'lasagna-alla-bolognese': 32.00,
+  'branzino-al-cartoccio': 44.00,
+  'tiramisu-classico': 18.00
+};
+
 const isEmail = (value) => typeof value === 'string' && /.+@.+\..+/.test(value.trim());
 const isNonEmpty = (value) => typeof value === 'string' && value.trim().length > 0;
 
@@ -152,8 +191,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
 
   const hasInvalidItem = items.some((item) => {
     const qty = Number(item.qty);
-    const price = Number(item.price);
-    return !isNonEmpty(item.name) || !Number.isFinite(qty) || qty < 1 || !Number.isFinite(price) || price <= 0;
+    const resolvedPrice = MENU_PRICES[item.id];
+    return !isNonEmpty(item.name) || !Number.isFinite(qty) || qty < 1 || typeof resolvedPrice !== 'number';
   });
 
   if (hasInvalidItem) {
@@ -174,7 +213,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
 
   await delay(500);
 
-  const amount = items.reduce((sum, item) => sum + Number(item.price) * Number(item.qty), 0);
+  const amount = items.reduce((sum, item) => sum + MENU_PRICES[item.id] * Number(item.qty), 0);
   const orderId = buildOrderId();
 
   res.json({
@@ -224,6 +263,23 @@ app.use('/api/*splat', (req, res) => {
     success: false,
     message: 'API endpoint not found.'
   });
+});
+
+// Global Error Handler
+app.use((err, req, res, next) => {
+  console.error('Unhandled Server Error:', err);
+  res.status(500).json({
+    success: false,
+    message: 'An unexpected server error occurred.'
+  });
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception thrown:', err);
 });
 
 app.listen(PORT, () => {

@@ -4,178 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservations - La Dolce Vita</title>
-    <meta name="description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:title" content="La Dolce Vita - Authentic Italian Cuisine">
-    <meta property="og:description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:image" content="https://images.pexels.com/photos/34994568/pexels-photo-34994568.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max">
+    <meta name="description" content="Book your table at La Dolce Vita. Experience authentic Italian dining.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="preloader"><i class="fas fa-utensils loader-icon"></i></div>
+    <div class="custom-cursor" id="custom-cursor"></div>
 
-    <div class="social-sidebar">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-    </div>
-
-    <header>
+    <!-- Header Navigation -->
+    <header id="navbar">
         <nav>
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <i class="fas fa-utensils"></i>
                 La Dolce Vita
-            </div>
+            </a>
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#home">Experience</a></li>
+                <li><a href="menu.html">The Menu</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="order.html">Order Online</a></li>
-                <li><a href="index.html#about">Our Story</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="reservations.html" class="btn-reservations active">Book a Table</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="reservations.html" class="btn-reservations active">Reserve</a></li>
             </ul>
-            <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-                <span class="nav__toggle-line"></span>
-            </button>
         </nav>
     </header>
 
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="index.html#home" class="mobile-menu__link">Home</a>
-        <a href="menu.html" class="mobile-menu__link">Menu</a>
-        <a href="gallery.html" class="mobile-menu__link">Gallery</a>
-        <a href="order.html" class="mobile-menu__link">Order</a>
-        <a href="reservations.html" class="mobile-menu__link">Reserve</a>
-    </div>
+    <!-- Subpage Hero -->
+    <header class="subpage-hero">
+        <div class="container">
+            <span class="subpage-kicker">Prenotazioni</span>
+            <h1 class="subpage-title">BOOK YOUR TABLE</h1>
+            <p style="max-width: 600px; margin: 0 auto; opacity: 0.8;">Reserve an intimate tableside experience. Valet parking is included on arrival.</p>
+        </div>
+    </header>
 
     <main>
-        <section class="page-hero">
-            <div class="page-hero__bg">
-                <img src="https://images.pexels.com/photos/5379705/pexels-photo-5379705.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=max" alt="Dining room" loading="eager">
-            </div>
-            <div class="page-hero__overlay"></div>
-            <div class="page-hero__content">
-                <span class="label">Reservations</span>
-                <h1>Book Your Table</h1>
-                <p>Reserve an intimate table or a celebratory dining room experience.</p>
-            </div>
-        </section>
-
-        <section class="section intro-section">
-            <div class="container intro-grid">
-                <div>
-                    <span class="eyebrow">The Evening</span>
-                    <h2>An Evening Curated for You</h2>
-                    <p class="section-lead">Our dining team prepares each table with personalized details, from wine pairings to anniversary menus.</p>
-                </div>
-                <div class="info-card">
-                    <h3>Reservation Details</h3>
-                    <ul class="info-list">
-                        <li>Dining room and terrace seating</li>
-                        <li>Private salon for up to 30 guests</li>
-                        <li>Smart elegant attire requested</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="reservation-page section">
-            <div class="container">
-                <div class="reservation-form-container">
-                    <form id="reservation-form" class="lux-form">
-                        <div class="form-group">
-                            <label for="res-name">Full Name</label>
-                            <input type="text" id="res-name" name="res-name" required placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="res-email">Email Address</label>
-                            <input type="email" id="res-email" name="res-email" required placeholder="Your Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="res-date">Date</label>
-                            <input type="date" id="res-date" name="res-date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="res-time">Time</label>
-                            <select id="res-time" name="res-time" required>
-                                <option value="" disabled selected>Select Time</option>
-                                <option value="17:00">5:00 PM</option>
-                                <option value="18:00">6:00 PM</option>
-                                <option value="19:00">7:00 PM</option>
-                                <option value="20:00">8:00 PM</option>
-                                <option value="21:00">9:00 PM</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="res-guests">Number of Guests</label>
-                            <input type="number" id="res-guests" name="res-guests" min="1" max="20" required value="2">
-                        </div>
-                        <div class="form-group">
-                            <label for="res-phone">Phone Number</label>
-                            <input type="tel" id="res-phone" name="res-phone" required placeholder="(555) 123-4567">
-                        </div>
-                        <div class="form-group full-width">
-                            <label for="res-requests">Special Requests</label>
-                            <textarea id="res-requests" name="res-requests" rows="3" placeholder="Allergies, birthdays, or specific table preference..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Confirm Reservation</button>
-                    </form>
-                </div>
+        <section class="container" style="padding: 100px 40px;">
+            <div class="reservation-form-container">
+                <h2>TABLE RESERVATION</h2>
+                <form id="reservation-form" onsubmit="event.preventDefault(); alert('TABLE RESERVED // CONFIRMATION SENT VIA EMAIL');">
+                    <div class="form-group">
+                        <label for="res-name">Full Name</label>
+                        <input type="text" id="res-name" required placeholder="e.g. Alessandro Rossi">
+                    </div>
+                    <div class="form-group">
+                        <label for="res-email">Email Address</label>
+                        <input type="email" id="res-email" required placeholder="e.g. alessandro@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="res-date">Preferred Date</label>
+                        <input type="date" id="res-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-guests">Number of Guests</label>
+                        <select id="res-guests">
+                            <option value="2">2 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="8">8+ Guests</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">REQUEST RESERVATION //</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="site-footer__top">
-                <div class="site-footer__brand">
-                    <div class="site-footer__logo">
-                        <i class="fas fa-utensils"></i>
-                        <span>La Dolce Vita</span>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">La Dolce Vita</a>
                     <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
-                    <div class="site-footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                    </div>
                 </div>
-                <div class="site-footer__col">
+                <div class="footer-links-col">
                     <h4>Visit</h4>
-                    <p>123 Via Roma, Culinary District, City</p>
+                    <p>123 Via Roma, Culinary District</p>
                     <p>(555) 123-4567</p>
-                    <p>Tue-Sun: 5pm - 10pm</p>
                 </div>
-                <div class="site-footer__col">
+                <div class="footer-links-col">
                     <h4>Explore</h4>
-                    <a href="menu.html">Menu</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="reservations.html">Reservations</a>
-                    <a href="order.html">Order Online</a>
+                    <ul class="footer-links">
+                        <li><a href="menu.html" class="footer-link">The Menu</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="reservations.html" class="footer-link">Reservations</a></li>
+                    </ul>
                 </div>
-                <div class="site-footer__col">
-                    <h4>Newsletter</h4>
-                    <p>Seasonal specials and chef events.</p>
-                    <form class="site-footer__form newsletter-form">
-                        <input type="email" placeholder="Email address" required aria-label="Email address">
-                        <button type="submit" class="btn-primary">Join</button>
-                    </form>
+                <div class="footer-links-col">
+                    <h4>Online Orders</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html" class="footer-link">Order Online</a></li>
+                        <li><a href="checkout.html" class="footer-link">Checkout</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="site-footer__bottom">
-                <p class="site-footer__copy">&copy; 2026 La Dolce Vita. All rights reserved.</p>
-                <span class="site-footer__note">Valet parking available on request.</span>
+            <div class="footer-legal">
+                <span>&copy; 2026 La Dolce Vita. All rights reserved.</span>
+                <span>Valet parking available. Elegant Casual dress code.</span>
             </div>
         </div>
     </footer>
 
     <script type="module" src="js/script.js"></script>
-    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 </body>
 </html>
-

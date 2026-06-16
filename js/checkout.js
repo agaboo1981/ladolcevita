@@ -202,7 +202,11 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        localStorage.removeItem(CART_STORAGE_KEY);
+        try {
+          localStorage.removeItem(CART_STORAGE_KEY);
+        } catch (error) {
+          console.warn('LocalStorage remove failed:', error);
+        }
         window.location.href = data.redirectUrl || `success.html?type=order&id=${encodeURIComponent(data.orderId || '')}`;
       } catch (error) {
         showToast(error.message || 'Unable to process checkout. Please try again.', 'error');
@@ -218,44 +222,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const menuToggle = document.querySelector('.nav__toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  if (menuToggle && mobileMenu) {
-    const closeMenu = () => {
-      mobileMenu.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+  const bindPreloader = () => {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) {
+      return;
+    }
+
+    const dismiss = () => {
+      preloader.classList.add('fade-out-loader');
     };
 
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.contains('open');
-      if (isOpen) {
-        closeMenu();
-        return;
-      }
-
-      mobileMenu.classList.add('open');
-      menuToggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    });
-
-    mobileMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        closeMenu();
-      }
-    });
-  }
-
-  const header = document.querySelector('.site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header?.classList.add('scrolled');
+    if (document.readyState === 'complete') {
+      setTimeout(dismiss, 300);
     } else {
-      header?.classList.remove('scrolled');
+      window.addEventListener('load', () => {
+        setTimeout(dismiss, 700);
+      });
+    }
+
+    setTimeout(dismiss, 4000);
+  };
+
+  const bindCustomCursor = () => {
+    const cursor = document.querySelector('.custom-cursor');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!cursor || isTouchDevice) {
+      document.body.classList.remove('cursor-enabled');
+      if (cursor) {
+        cursor.style.display = 'none';
+      }
+      document.body.style.cursor = 'auto';
+      return;
+    }
+
+    document.body.classList.add('cursor-enabled');
+
+    document.addEventListener('mousemove', (event) => {
+      cursor.style.left = `${event.clientX}px`;
+      cursor.style.top = `${event.clientY}px`;
+    });
+
+    document.querySelectorAll('a, button, .btn-primary, .btn-secondary, .btn-reservations, .btn-add').forEach((el) => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+  };
+
+  bindPreloader();
+  bindCustomCursor();
+
+  const header = document.getElementById('navbar');
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 50) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   }, { passive: true });
 });
