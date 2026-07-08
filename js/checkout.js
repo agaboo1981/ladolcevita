@@ -1,36 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const bindZoomGuards = () => {
-    let lastTouchEnd = 0;
-
-    ['gesturestart', 'gesturechange', 'gestureend'].forEach((eventName) => {
-      document.addEventListener(eventName, (event) => {
-        event.preventDefault();
-      }, { passive: false });
-    });
-
-    document.addEventListener('touchmove', (event) => {
-      if (event.touches.length > 1) {
-        event.preventDefault();
-      }
-    }, { passive: false });
-
-    document.addEventListener('touchend', (event) => {
-      const now = Date.now();
-      if (now - lastTouchEnd <= 280) {
-        event.preventDefault();
-      }
-      lastTouchEnd = now;
-    }, { passive: false });
-
-    document.addEventListener('wheel', (event) => {
-      if (event.ctrlKey || event.metaKey) {
-        event.preventDefault();
-      }
-    }, { passive: false });
-  };
-
-  bindZoomGuards();
-
   const CART_STORAGE_KEY = 'ldv-cart';
   const normalizeApiBase = (value) => value.replace(/\/+$/, '');
   const envBase = typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_BASE

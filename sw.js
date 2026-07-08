@@ -13,8 +13,8 @@ const ASSETS_TO_CACHE = [
   './css/style.css',
   './js/script.js',
   './js/checkout.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
-  'https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap'
+  './vendor/fontawesome/css/all.min.css',
+  './fonts/ldv-fonts.css'
 ];
 
 self.addEventListener('install', (event) => {

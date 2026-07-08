@@ -37,35 +37,6 @@ const API_BASE = getApiBase();
 const apiUrl = (path) => `${API_BASE}${path}`;
 const isLocalDevelopment = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 
-const bindZoomGuards = () => {
-    let lastTouchEnd = 0;
-
-    ['gesturestart', 'gesturechange', 'gestureend'].forEach((eventName) => {
-        document.addEventListener(eventName, (event) => {
-            event.preventDefault();
-        }, { passive: false });
-    });
-
-    document.addEventListener('touchmove', (event) => {
-        if (event.touches.length > 1) {
-            event.preventDefault();
-        }
-    }, { passive: false });
-
-    document.addEventListener('touchend', (event) => {
-        const now = Date.now();
-        if (now - lastTouchEnd <= 280) {
-            event.preventDefault();
-        }
-        lastTouchEnd = now;
-    }, { passive: false });
-
-    document.addEventListener('wheel', (event) => {
-        if (event.ctrlKey || event.metaKey) {
-            event.preventDefault();
-        }
-    }, { passive: false });
-};
 
 const getCart = () => {
     try {
@@ -135,15 +106,23 @@ const bindScrollAnimations = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+                entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     document.querySelectorAll('section, .testimonial-card, .highlight-item, .gallery-item').forEach((el) => {
+        el.classList.add('fade-in');
         observer.observe(el);
     });
+
+    // Safety fallback: ensure content is visible even if observer fails
+    setTimeout(() => {
+        document.querySelectorAll('.fade-in:not(.visible)').forEach((el) => {
+            el.classList.add('visible');
+        });
+    }, 2000);
 };
 
 const bindBackToTop = () => {
@@ -181,26 +160,44 @@ const bindGalleryLightbox = () => {
 
     const lightbox = document.createElement('div');
     lightbox.id = 'lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-label', 'Image viewer');
+    lightbox.setAttribute('aria-hidden', 'true');
     document.body.appendChild(lightbox);
+
+    const openLightbox = () => {
+        lightbox.style.display = 'flex';
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+        lightbox.style.display = 'none';
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
 
     galleryItems.forEach((img) => {
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', () => {
             lightbox.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
-            lightbox.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            openLightbox();
         });
     });
 
-    lightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-        document.body.style.overflow = 'auto';
+    lightbox.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.style.display === 'flex') {
+            closeLightbox();
+        }
     });
 };
 
 const bindMenuFiltering = () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const menuItems = document.querySelectorAll('.menu-category li');
+    const menuItems = document.querySelectorAll('.menu-item');
 
     if (!filterButtons.length || !menuItems.length) {
         return;
@@ -210,15 +207,18 @@ const bindMenuFiltering = () => {
         btn.addEventListener('click', () => {
             const filter = btn.dataset.filter;
 
-            filterButtons.forEach((button) => button.classList.remove('active'));
-            btn.classList.add('active');
+            filterButtons.forEach((button) => {
+                const isActive = button === btn;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
 
             menuItems.forEach((item) => {
-                if (filter === 'all' || item.dataset.diet === filter) {
-                    item.style.display = 'grid';
+                const diets = (item.dataset.diet || '').split(/\s+/);
+                const matches = filter === 'all' || diets.includes(filter);
+                item.style.display = matches ? 'flex' : 'none';
+                if (matches) {
                     item.style.animation = 'fadeIn 0.4s';
-                } else {
-                    item.style.display = 'none';
                 }
             });
         });
@@ -273,31 +273,7 @@ const bindPreloader = () => {
     setTimeout(dismiss, 4000);
 };
 
-const bindCustomCursor = () => {
-    const cursor = document.querySelector('.custom-cursor');
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    if (!cursor || isTouchDevice) {
-        document.body.classList.remove('cursor-enabled');
-        if (cursor) {
-            cursor.style.display = 'none';
-        }
-        document.body.style.cursor = 'auto';
-        return;
-    }
-
-    document.body.classList.add('cursor-enabled');
-
-    document.addEventListener('mousemove', (event) => {
-        cursor.style.left = `${event.clientX}px`;
-        cursor.style.top = `${event.clientY}px`;
-    });
-
-    document.querySelectorAll('a, button, .btn-primary, .btn-secondary, .btn-reservations, .btn-add').forEach((el) => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
-};
+const bindCustomCursor = () => {};
 
 const bindHeaderScroll = () => {
     const siteHeader = document.getElementById('navbar');
@@ -675,8 +651,6 @@ const registerServiceWorker = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    bindZoomGuards();
-
     bindAnchorScrolling();
     bindScrollAnimations();
     bindBackToTop();

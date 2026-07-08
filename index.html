@@ -3,118 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Dolce Vita - 5-Star Michelin Dining Experience</title>
-    <meta name="description" content="Authentic Italian fine dining at La Dolce Vita. Handcrafted pasta, fine wines, and candlelit hospitality since 1985.">
+    <title>La Dolce Vita - Italian Restaurant</title>
+    <meta name="description" content="Italian cuisine in the heart of the city. Fresh pasta, estate wines, and a dining room that feels like home.">
+    <link rel="stylesheet" href="fonts/ldv-fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
     <div id="preloader"><i class="fas fa-utensils loader-icon"></i></div>
-    <div class="custom-cursor" id="custom-cursor"></div>
-
-    <div class="social-sidebar">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-    </div>
 
     <!-- Header Navigation -->
+        <!-- Header Navigation -->
+        <!-- Floating menu-card header -->
     <header id="navbar">
-        <nav>
-            <a href="index.html" class="logo">
-                <i class="fas fa-utensils"></i>
-                La Dolce Vita
+        <div class="masthead">
+            <a href="index.html" class="brand" aria-label="La Dolce Vita — home">
+                <span class="brand-seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 21v-9" />
+                        <path d="M12 12c-2.4 0-4-1.5-4-4 2.4 0 4 1.5 4 4z" />
+                        <path d="M12 12c2.4 0 4-1.5 4-4-2.4 0-4 1.5-4 4z" />
+                        <path d="M12 16c-2 0-3.4-1.3-3.4-3.2 2 0 3.4 1.3 3.4 3.2z" />
+                    </svg></span>
+                <span class="brand-text">
+                    <span class="brand-name">La Dolce Vita</span>
+                    <span class="brand-tag">Tuscan Dining Salon</span>
+                </span>
             </a>
-            <ul>
-                <li><a href="index.html#home" class="active">Experience</a></li>
-                <li><a href="menu.html">The Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="order.html">Order</a></li>
-                <li><a href="reservations.html" class="btn-reservations">Reserve</a></li>
-            </ul>
-            <button class="nav__toggle" aria-label="Toggle Menu" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
+
+            <nav class="nav-index" aria-label="Primary">
+                    <a href="index.html#home" class="nav-item active"><span class="nav-num">01</span><span class="nav-label">Home</span></a>
+                    <a href="menu.html" class="nav-item"><span class="nav-num">02</span><span class="nav-label">Menu</span></a>
+                    <a href="gallery.html" class="nav-item"><span class="nav-num">03</span><span class="nav-label">Gallery</span></a>
+                    <a href="order.html" class="nav-item"><span class="nav-num">04</span><span class="nav-label">Order</span></a>
+            </nav>
+
+            <div class="header-actions">
+                <span class="hours-chip" aria-hidden="true"><span class="dot"></span>Tue–Sun · 5–10pm</span>
+                <a href="reservations.html" class="btn-reserve">Reserve <span class="arrow">&rarr;</span></a>
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
         <div class="mobile-menu">
             <ul>
-                <li><a href="index.html#home" class="active">Experience</a></li>
-                <li><a href="menu.html">The Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="order.html">Order</a></li>
-                <li><a href="reservations.html" class="mobile-btn-reserve">Reserve</a></li>
+                <li><a href="index.html#home" class="nav-item-m active"><span class="m-num">01</span>Home</a></li>
+                <li><a href="menu.html" class="nav-item-m"><span class="m-num">02</span>Menu</a></li>
+                <li><a href="gallery.html" class="nav-item-m"><span class="m-num">03</span>Gallery</a></li>
+                <li><a href="order.html" class="nav-item-m"><span class="m-num">04</span>Order</a></li>
+                <li><a href="reservations.html" class="mobile-btn-reserve">Reserve a Table</a></li>
             </ul>
         </div>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <!-- 1. The Experience (Hero) -->
         <section id="home" class="hero">
-            <div class="hero-video-container">
-                <div class="hero-overlay"></div>
-                <img src="images/hero_dining.jpg" alt="La Dolce Vita Dining Room" class="hero-bg-img">
-            </div>
             <div class="hero-inner">
-                <div class="hero-content">
-                    <span class="eyebrow">Tuscan Dining Salon, since 1985</span>
-                    <h1>La Dolce Vita</h1>
-                    <p class="hero-subtitle">Where candlelight, estate vintages, and handmade pasta turn evenings into rituals.</p>
-                    <div class="hero-btns">
-                        <a href="reservations.html" class="btn-primary">Reserve a Table</a>
-                        <a href="menu.html" class="btn-secondary">Explore Menu</a>
+                <div class="hero-cover">
+                    <span class="eyebrow">Tuscan Dining Salon · Est. 1985</span>
+                    <h1 class="hero-title">La <em>Dolce</em> Vita</h1>
+                    <p class="hero-lede">Where candlelight, estate vintages, and handmade pasta turn evenings into rituals.</p>
+                    <div class="hero-cta">
+                        <a href="reservations.html" class="btn-reserve">Reserve a Table <span class="arrow">&rarr;</span></a>
+                        <a href="menu.html" class="btn-ghost">View the Menu</a>
                     </div>
-                    <div class="hero-meta">
-                        <div>
-                            <span class="meta-label">Hours</span>
-                            <span class="meta-value">Tue-Sun, 5pm-10pm</span>
-                        </div>
-                        <div>
-                            <span class="meta-label">Dress Code</span>
-                            <span class="meta-value">Elegant casual</span>
-                        </div>
-                        <div>
-                            <span class="meta-label">Private Dining</span>
-                            <span class="meta-value">Up to 30 guests</span>
-                        </div>
-                    </div>
-                    <div class="hero-awards">
-                        <span>Michelin Guide 2025</span>
-                        <span>Wine Spectator Award</span>
-                        <span>Gambero Rosso 2 Forks</span>
-                    </div>
+                    <div class="hero-rule"></div>
+                    <dl class="hero-facts">
+                        <div><dt>Hours</dt><dd>Tue–Sun · 5–10pm</dd></div>
+                        <div><dt>Dress</dt><dd>Elegant casual</dd></div>
+                        <div><dt>Private</dt><dd>Up to 30 guests</dd></div>
+                    </dl>
                 </div>
-                <aside class="hero-card">
-                    <span class="card-eyebrow">Chef's Experience</span>
-                    <h3>Seasonal Tasting Journey</h3>
-                    <p>Five or seven courses curated nightly with estate wines and regional specialties.</p>
-                    <ul class="card-list">
-                        <li>Sommelier pairing available</li>
-                        <li>Vegetarian tasting on request</li>
-                        <li>Anniversary packages</li>
-                    </ul>
-                    <div class="card-actions">
-                        <a href="reservations.html" class="btn-primary">Reserve</a>
-                        <a href="index.html#about" class="btn-secondary">Our Story</a>
-                    </div>
-                </aside>
+
+                <figure class="hero-photo">
+                    <img src="images/truffle_pasta.jpg" alt="Tagliatelle al Tartufo, our signature hand-rolled pasta with shaved Umbrian truffle" loading="eager">
+                    <figcaption class="hero-photo-cap">
+                        <span class="spotlight-kicker">Tonight's first course</span>
+                        <span class="hero-photo-dish">Tagliatelle al Tartufo · $38</span>
+                    </figcaption>
+                </figure>
             </div>
+
+            <a href="#about" class="hero-scroll" aria-label="Scroll to our story">Scroll<span></span></a>
         </section>
 
-        <!-- 2. Our Legacy (About) -->
-        <section id="about" class="about-section">
+        <!-- 2. Our Legacy -->
+        <section id="about" class="legacy">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <span class="italic">Our Legacy</span>
-                        <h2>Crafted with Passion</h2>
-                        <p class="lead">
-                            Founded in 1985 by Chef Alessandro Rossi, La Dolce Vita brings the rustic charm of Tuscany to your table. We believe in fresh ingredients, slow cooking, and the joy of sharing a meal with loved ones.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/chef_alessandro.jpg" alt="Chef Alessandro Rossi plating a gourmet dish">
-                    </div>
+                <div class="legacy-head">
+                    <span class="eyebrow">Our Legacy</span>
+                    <h2 class="legacy-title">Crafted with passion, <em>served with memory.</em></h2>
                 </div>
+
+                <div class="legacy-grid">
+                    <div class="legacy-story">
+                        <p class="legacy-lead">Founded in 1985 by Chef Alessandro Rossi, La Dolce Vita brings the rustic charm of Tuscany to your table.</p>
+                        <ol class="legacy-chapters">
+                            <li>
+                                <span class="ch-num">01</span>
+                                <div>
+                                    <h3>The Beginning · 1985</h3>
+                                    <p>Alessandro left Lucca with a single copper pot and his nonna's recipes. The first dining room sat twelve.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="ch-num">02</span>
+                                <div>
+                                    <h3>The Craft</h3>
+                                    <p>Pasta is still rolled by hand each morning. Sauces simmer from noon. Nothing leaves the pass until it's right.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="ch-num">03</span>
+                                <div>
+                                    <h3>Today</h3>
+                                    <p>Three dining rooms, one wood-fired oven, and a courtyard of herbs — still cooking like it's the first night.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <figure class="legacy-portrait">
+                        <img src="images/chef_alessandro.jpg" alt="Chef Alessandro Rossi in the kitchen" loading="lazy">
+                        <span class="portrait-seal">Est.<br>1985</span>
+                        <figcaption>
+                            <span class="portrait-name">Chef Alessandro Rossi</span>
+                            <span class="portrait-role">Founder · Executive Chef</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <dl class="legacy-facts">
+                    <div><dt>Founded</dt><dd>1985</dd></div>
+                    <div><dt>From</dt><dd>Lucca, Tuscany</dd></div>
+                    <div><dt>Seats</dt><dd>90 nightly</dd></div>
+                </dl>
             </div>
         </section>
 
@@ -124,17 +150,33 @@
                 <h2 class="quote">Signature Delicacies</h2>
                 <div class="highlight-grid">
                     <div class="highlight-item">
-                        <img src="images/truffle_pasta.jpg" alt="Tagliatelle al Tartufo">
+                         <picture>
+                             <source srcset="images/optimized/truffle_pasta.webp" type="image/webp">
+                             <img src="images/truffle_pasta.jpg" alt="Tagliatelle al Tartufo with fresh truffles" loading="lazy">
+                         </picture>
                         <div class="item-text">
                             <h4>Tagliatelle al Tartufo</h4>
                             <p>Hand-rolled tagliatelle tossed in black truffle cream, shaved fresh Umbrian truffles, and 24-month aged Parmigiano-Reggiano.</p>
                         </div>
                     </div>
                     <div class="highlight-item">
-                        <img src="images/tiramisu.jpg" alt="Deconstructed Tiramisu">
+                         <picture>
+                             <source srcset="images/optimized/tiramisu.webp" type="image/webp">
+                             <img src="images/tiramisu.jpg" alt="Tiramisu with mascarpone" loading="lazy">
+                         </picture>
                         <div class="item-text">
                             <h4>Deconstructed Tiramisu</h4>
                             <p>Espresso-soaked ladyfingers, whipped mascarpone quenelle, dusted cocoa powder, and dark chocolate shards garnished with gold leaf flakes.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                         <picture>
+                             <source srcset="images/optimized/dishes_spread.webp" type="image/webp">
+                             <img src="images/dishes_spread.jpg" alt="A spread of seasonal dishes on the pass" loading="lazy">
+                         </picture>
+                        <div class="item-text">
+                            <h4>The Evening Spread</h4>
+                            <p>Every course leaves the pass together — antipasti, primi, secondi, and dolci staged for a single, unhurried seating.</p>
                         </div>
                     </div>
                 </div>
@@ -146,20 +188,76 @@
             <div class="container">
                 <h2>Inside Our Kitchen</h2>
                 <div class="kitchen-grid">
-                    <img src="images/chef_line.jpg" alt="Chef Prep Line">
-                    <img src="images/plating_dish.jpg" alt="Plating Fine Dish">
+                 <picture>
+                     <source srcset="images/optimized/chef_line.webp" type="image/webp">
+                     <img src="images/chef_line.jpg" alt="Our team preparing the evening service" loading="lazy">
+                 </picture>
+                 <picture>
+                     <source srcset="images/optimized/plating_dish.webp" type="image/webp">
+                     <img src="images/plating_dish.jpg" alt="A dish being plated with care" loading="lazy">
+                 </picture>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Testimonials (Wine Cellar Backdrop) -->
-        <section id="testimonials" class="testimonials" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1200&auto=format&fit=crop');">
+        <!-- 5. A Note from the Kitchen -->
+        <section id="testimonials" class="testimonials" style="background-image: url('images/hero_food.jpg');">
             <div class="testimonials-overlay"></div>
             <div class="container">
                 <div class="testimonial-text">
-                    "The best pasta I've had outside of Italy. The Tagliatelle al Tartufo is a masterpiece of earthy flavors."
+                    "We make the pasta fresh every morning. The sauce simmers all day. Come hungry, leave happy."
                 </div>
-                <div class="testimonial-author">— MARCO R. (MICHELIN CRITIC)</div>
+                <div class="testimonial-author">— Chef Alessandro</div>
+            </div>
+        </section>
+
+        <!-- 6. Guest Voices (Social Proof) -->
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <div class="reviews-head">
+                    <span class="eyebrow">Guest Voices</span>
+                    <h2>They Came Hungry, Left Happy</h2>
+                    <div class="reviews-rating" aria-label="Rated 4.9 out of 5 from 1,200 reviews">
+                        <span class="stars" aria-hidden="true">★★★★★</span>
+                        <span class="rating-value">4.9 / 5</span>
+                        <span class="rating-count">· 1,200+ reviews</span>
+                    </div>
+                </div>
+                <div class="reviews-grid">
+                    <figure class="review-card">
+                        <div class="review-stars" aria-hidden="true">★★★★★</div>
+                        <blockquote>"The tasting journey was the best meal we've had in a decade. The sommelier pairing alone was worth the trip."</blockquote>
+                        <figcaption>
+                            <span class="reviewer-name">Margherita L.</span>
+                            <span class="reviewer-meta">Anniversary dinner · Via TripAdvisor</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="review-card">
+                        <div class="review-stars" aria-hidden="true">★★★★★</div>
+                        <blockquote>"Candlelit, unhurried, and the pasta was genuinely made that morning. You feel looked after without a hint of fuss."</blockquote>
+                        <figcaption>
+                            <span class="reviewer-name">Daniel K.</span>
+                            <span class="reviewer-meta">Date night · Via Google</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="review-card">
+                        <div class="review-stars" aria-hidden="true">★★★★★</div>
+                        <blockquote>"We booked the private room for 24. Every dietary need was handled quietly and perfectly. Flawless hosting."</blockquote>
+                        <figcaption>
+                            <span class="reviewer-name">Priya S.</span>
+                            <span class="reviewer-meta">Private event · Via OpenTable</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="press-row" aria-label="As featured in">
+                    <span class="press-label">As featured in</span>
+                    <ul class="press-logos">
+                        <li>Condé Nast Traveler</li>
+                        <li>Michelin Guide</li>
+                        <li>Eater</li>
+                        <li>Food &amp; Wine</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
