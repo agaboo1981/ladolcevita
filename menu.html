@@ -4,187 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - La Dolce Vita</title>
-    <meta name="description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:title" content="La Dolce Vita - Authentic Italian Cuisine">
-    <meta property="og:description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    <meta name="description" content="Seasonal Italian dishes made with fresh pasta, estate wines, and ingredients sourced from local farmers.">
+    <link rel="stylesheet" href="fonts/ldv-fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-    <div class="social-sidebar">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-    </div>
+    <!-- Header Navigation -->
+        <!-- Header Navigation -->
+        <!-- Floating menu-card header -->
+        <header id="navbar">
+        <div class="masthead">
+            <a href="index.html" class="brand" aria-label="La Dolce Vita — home">
+                <span class="brand-seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21v-9"/>
+                    <path d="M12 12c-2.4 0-4-1.5-4-4 2.4 0 4 1.5 4 4z"/>
+                    <path d="M12 12c2.4 0 4-1.5 4-4-2.4 0-4 1.5-4 4z"/>
+                    <path d="M12 16c-2 0-3.4-1.3-3.4-3.2 2 0 3.4 1.3 3.4 3.2z"/>
+                </svg></span>
+                <span class="brand-text">
+                    <span class="brand-name">La Dolce Vita</span>
+                    <span class="brand-tag">Tuscan Dining Salon · Est. 1985</span>
+                </span>
+            </a>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-utensils"></i>
-                La Dolce Vita
+            <nav class="nav-index" aria-label="Primary">
+                <a href="menu.html" class="nav-item active">Menu</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="order.html" class="nav-item">Order</a>
+            </nav>
+
+            <div class="header-actions">
+                <span class="hours-chip"><span class="dot"></span>Tue–Sun · 5–10pm</span>
+                <a href="reservations.html" class="btn-reserve">Reserve a table <span class="arrow">→</span></a>
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
+        </div>
+
+        <div class="mobile-menu">
             <ul>
-                <li><a href="index.html#home" class="active">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="order.html">Order Online</a></li>
-                <li><a href="index.html#about">Our Story</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="reservations.html" class="btn-reservations">Book a Table</a></li>
+                <li><a href="menu.html" class="nav-item-m active">Menu</a></li>
+                <li><a href="gallery.html" class="nav-item-m">Gallery</a></li>
+                <li><a href="order.html" class="nav-item-m">Order</a></li>
+                <li><a href="reservations.html" class="mobile-btn-reserve">Reserve a table</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="page-header">
+    <!-- Menu Introduction -->
+    <section class="menu-intro">
+        <div class="container">
+            <span class="eyebrow">Seasonal Menu</span>
+            <h1>Our Kitchen</h1>
+            <p>We change the menu when the ingredients tell us to. The pasta is made fresh every morning. The sauce simmers all day. Come hungry.</p>
+        </div>
+    </section>
+
+    <main id="main-content" tabindex="-1">
+        <!-- Menu Filters -->
+        <div class="menu-filters" role="group" aria-label="Filter menu by dietary preference">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="vegetarian" aria-pressed="false">Vegetarian</button>
+            <button class="filter-btn" data-filter="pescatarian" aria-pressed="false">Pescatarian</button>
+            <button class="filter-btn" data-filter="gluten-free" aria-pressed="false">Gluten-Free</button>
+        </div>
+
+        <!-- Antipasti -->
+        <section class="menu-section">
             <div class="container">
-                <h1>Il Nostro Menu</h1>
-                <p>Authentic Italian flavors prepared with passion.</p>
+                <h2 data-course="I">Antipasti</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-diet="vegetarian">
+                        <div class="menu-item-content">
+                            <h3>Bruschetta al Pomodoro</h3>
+                            <p>Toasted sourdough, vine-ripened tomatoes, garlic oil, aged saba. Simple, perfect.</p>
+                        </div>
+                        <span class="menu-item-price">$16</span><span class="diet">v</span>
+                    </div>
+                    <div class="menu-item" data-diet="vegetarian">
+                        <div class="menu-item-content">
+                            <h3>Burrata con Fichi</h3>
+                            <p>Creamy burrata, caramelized figs, prosciutto di Parma. A study in sweet and salt.</p>
+                        </div>
+                        <span class="menu-item-price">$22</span><span class="diet">v</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="menu-page">
+        <!-- Primi -->
+        <section class="menu-section menu-section--alt">
             <div class="container">
-                <div class="menu-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
-                    <button class="filter-btn" data-filter="gluten-free">Gluten-Free</button>
-                </div>
-                <div class="menu-category">
-                    <h3>Antipasti</h3>
-                    <ul>
-                        <li>
-                            <span class="dish-name">Bruschetta al Pomodoro</span>
-                            <span class="dish-desc">Toasted bread, fresh tomatoes, basil, garlic, extra virgin olive oil.</span>
-                            <span class="dish-price">$12</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Carpaccio di Manzo</span>
-                            <span class="dish-desc">Thinly sliced raw beef, arugula, parmesan shavings, lemon vinaigrette.</span>
-                            <span class="dish-price">$16</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Calamari Fritti</span>
-                            <span class="dish-desc">Crispy fried squid with lemon and spicy marinara sauce.</span>
-                            <span class="dish-price">$15</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Primi</h3>
-                    <ul>
-                        <li data-diet="vegetarian">
-                            <span class="dish-name">Tagliatelle al Tartufo <i class="fas fa-leaf" title="Vegetarian"></i></span>
-                            <span class="dish-desc">Homemade tagliatelle, black truffle cream sauce, parmesan.</span>
-                            <span class="dish-price">$24</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Spaghetti alla Carbonara</span>
-                            <span class="dish-desc">Guanciale, pecorino romano, egg yolk, black pepper. No cream.</span>
-                            <span class="dish-price">$20</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Lasagna alla Bolognese</span>
-                            <span class="dish-desc">Layers of pasta, meat ragu, bechamel sauce, mozzarella.</span>
-                            <span class="dish-price">$22</span>
-                        </li>
-                        <li data-diet="vegetarian">
-                            <span class="dish-name">Risotto ai Funghi <i class="fas fa-leaf" title="Vegetarian"></i></span>
-                            <span class="dish-desc">Arborio rice, wild mushrooms, parmesan, white wine.</span>
-                            <span class="dish-price">$23</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Secondi</h3>
-                    <ul>
-                        <li>
-                            <span class="dish-name">Osso Buco alla Milanese</span>
-                            <span class="dish-desc">Braised veal shanks, gremolata, saffron risotto.</span>
-                            <span class="dish-price">$32</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Branzino al Forno</span>
-                            <span class="dish-desc">Roasted Mediterranean sea bass, cherry tomatoes, olives, capers.</span>
-                            <span class="dish-price">$28</span>
-                        </li>
-                        <li data-diet="gluten-free">
-                            <span class="dish-name">Bistecca alla Fiorentina <i class="fas fa-wheat-awn-circle-exclamation" title="Gluten-Free"></i></span>
-                            <span class="dish-desc">Grilled T-bone steak, rosemary, olive oil. Served with roasted potatoes.</span>
-                            <span class="dish-price">$38</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Pollo al Rosmarino</span>
-                            <span class="dish-desc">Roasted organic chicken, rosemary, garlic, seasonal vegetables.</span>
-                            <span class="dish-price">$26</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Dolci</h3>
-                    <ul>
-                        <li>
-                            <span class="dish-name">Tiramisu Classico</span>
-                            <span class="dish-desc">Ladyfingers dipped in espresso, mascarpone cream, cocoa powder.</span>
-                            <span class="dish-price">$10</span>
-                        </li>
-                        <li data-diet="gluten-free">
-                            <span class="dish-name">Panna Cotta <i class="fas fa-wheat-awn-circle-exclamation" title="Gluten-Free"></i></span>
-                            <span class="dish-desc">Vanilla bean cream pudding, berry coulis.</span>
-                            <span class="dish-price">$9</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Cannoli Siciliani</span>
-                            <span class="dish-desc">Pastry shells filled with sweet ricotta and chocolate chips.</span>
-                            <span class="dish-price">$11</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Vini & Bevande</h3>
-                    <ul>
-                        <li>
-                            <span class="dish-name">Chianti Classico (Glass)</span>
-                            <span class="dish-desc">Medium-bodied red wine from Tuscany.</span>
-                            <span class="dish-price">$12</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">Pinot Grigio (Glass)</span>
-                            <span class="dish-desc">Crisp, light white wine from northern Italy.</span>
-                            <span class="dish-price">$10</span>
-                        </li>
-                        <li>
-                            <span class="dish-name">San Pellegrino (750ml)</span>
-                            <span class="dish-desc">Sparkling natural mineral water.</span>
-                            <span class="dish-price">$7</span>
-                        </li>
-                    </ul>
+                <h2 data-course="II">Primi</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-diet="vegetarian">
+                        <div class="menu-item-content">
+                            <h3>Tagliatelle al Tartufo</h3>
+                            <p>Hand-rolled egg pasta, truffle butter, shaved Umbrian truffles. The pasta is made this morning.</p>
+                        </div>
+                        <span class="menu-item-price">$38</span><span class="diet">v</span>
+                    </div>
+                    <div class="menu-item" data-diet="vegetarian">
+                        <div class="menu-item-content">
+                            <h3>Gnocchi Cacio e Pepe</h3>
+                            <p>Pillowy potato gnocchi, pecorino romano, toasted black pepper. A Roman classic, done right.</p>
+                        </div>
+                        <span class="menu-item-price">$32</span><span class="diet">v</span>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Secondi -->
+        <section class="menu-section">
+            <div class="container">
+                <h2 data-course="III">Secondi</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-diet="gluten-free">
+                        <div class="menu-item-content">
+                            <h3>Filetto di Manzo</h3>
+                            <p>Grass-fed beef tenderloin, Chianti reduction, roasted sunchokes. Cooked exactly how you like it.</p>
+                        </div>
+                        <span class="menu-item-price">$48</span><span class="diet">gf</span>
+                    </div>
+                    <div class="menu-item" data-diet="pescatarian gluten-free">
+                        <div class="menu-item-content">
+                            <h3>Branzino al Cartoccio</h3>
+                            <p>Mediterranean sea bass, baked in parchment with olives, capers, cherry tomatoes. Bright, clean, perfect.</p>
+                        </div>
+                        <span class="menu-item-price">$44</span><span class="diet">p</span><span class="diet">gf</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dolci -->
+        <section class="menu-section menu-section--alt">
+            <div class="container">
+                <h2 data-course="IV">Dolci</h2>
+                <div class="menu-items">
+                    <div class="menu-item" data-diet="vegetarian">
+                        <div class="menu-item-content">
+                            <h3>Tiramisu</h3>
+                            <p>Espresso-soaked ladyfingers, mascarpone, cocoa. Made fresh every morning. No shortcuts.</p>
+                        </div>
+                        <span class="menu-item-price">$14</span><span class="diet">v</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu colophon -->
+        <div class="menu-colophon">
+            <dl>
+                <div><dt>Served</dt><dd>Nightly · 5–10pm · last order 9:30</dd></div>
+                <div><dt>Wine</dt><dd>By the glass &amp; by the bottle</dd></div>
+                <div><dt>Corkage</dt><dd>$30 per bottle</dd></div>
+            </dl>
+            <div class="diet-legend">
+                <span><b>v</b> vegetarian</span>
+                <span><b>p</b> pescatarian</span>
+                <span><b>gf</b> gluten-free</span>
+            </div>
+            <p>Whatever you can’t eat, tell us — we adjust quietly. A full allergen guide is on request, and nothing leaves the pass until it’s right.</p>
+        </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+    <!-- Footer -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">La Dolce Vita</a>
+                    <p>Tuscan dining since 1985. Pasta rolled by hand each morning, estate wines, and a room that feels looked after.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Visit</h4>
+                    <p>123 Via Roma, Culinary District</p>
+                    <p>(555) 123-4567</p>
+                    <p>Tue–Sun · 5–10pm</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html" class="footer-link">The Menu</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="reservations.html" class="footer-link">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Takeaway</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html" class="footer-link">Order for pickup</a></li>
+                        <li><a href="checkout.html" class="footer-link">Checkout</a></li>
+                    </ul>
+                </div>
             </div>
-            <p>&copy; 2026 La Dolce Vita. All rights reserved.</p>
+            <div class="footer-legal">
+                <span>© 2026 La Dolce Vita · Lucca, Tuscany</span>
+                <span>Pasta rolled by hand each morning · Sauce simmers from noon</span>
+            </div>
         </div>
     </footer>
 
     <script type="module" src="js/script.js"></script>
-    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 </body>
 </html>

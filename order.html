@@ -3,80 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Online - La Dolce Vita</title>
-    <meta name="description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:title" content="La Dolce Vita - Authentic Italian Cuisine">
-    <meta property="og:description" content="Authentic Italian cuisine at La Dolce Vita. Handcrafted pasta, fine wines, and a legacy of passion since 1985.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    <title>Order - La Dolce Vita</title>
+    <meta name="description" content="Order La Dolce Vita's signature dishes for delivery. Prepared to travel beautifully.">
+    <link rel="stylesheet" href="fonts/ldv-fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-    <div class="social-sidebar">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-    </div>
+    <!-- Header Navigation -->
+        <!-- Header Navigation -->
+        <!-- Floating menu-card header -->
+        <header id="navbar">
+        <div class="masthead">
+            <a href="index.html" class="brand" aria-label="La Dolce Vita — home">
+                <span class="brand-seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21v-9"/>
+                    <path d="M12 12c-2.4 0-4-1.5-4-4 2.4 0 4 1.5 4 4z"/>
+                    <path d="M12 12c2.4 0 4-1.5 4-4-2.4 0-4 1.5-4 4z"/>
+                    <path d="M12 16c-2 0-3.4-1.3-3.4-3.2 2 0 3.4 1.3 3.4 3.2z"/>
+                </svg></span>
+                <span class="brand-text">
+                    <span class="brand-name">La Dolce Vita</span>
+                    <span class="brand-tag">Tuscan Dining Salon · Est. 1985</span>
+                </span>
+            </a>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-utensils"></i>
-                La Dolce Vita
+            <nav class="nav-index" aria-label="Primary">
+                <a href="menu.html" class="nav-item">Menu</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="order.html" class="nav-item active">Order</a>
+            </nav>
+
+            <div class="header-actions">
+                <span class="hours-chip"><span class="dot"></span>Tue–Sun · 5–10pm</span>
+                <a href="reservations.html" class="btn-reserve">Reserve a table <span class="arrow">→</span></a>
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
+        </div>
+
+        <div class="mobile-menu">
             <ul>
-                <li><a href="index.html#home" class="active">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="order.html">Order Online</a></li>
-                <li><a href="index.html#about">Our Story</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="reservations.html" class="btn-reservations">Book a Table</a></li>
+                <li><a href="menu.html" class="nav-item-m">Menu</a></li>
+                <li><a href="gallery.html" class="nav-item-m">Gallery</a></li>
+                <li><a href="order.html" class="nav-item-m active">Order</a></li>
+                <li><a href="reservations.html" class="mobile-btn-reserve">Reserve a table</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Order Online</h1>
-                <p>Fresh Italian flavors delivered to your door.</p>
-            </div>
-        </section>
+    <!-- Order Introduction -->
+    <section class="order-intro">
+        <div class="container">
+            <span class="eyebrow">Ordinare Online</span>
+            <h1>Delivered with Care</h1>
+            <p>Signature dishes, prepared to travel beautifully. The pasta is made fresh, the sauce simmers all day, and we pack it with the same care we'd use if you were sitting at our table.</p>
+        </div>
+    </section>
 
-        <section class="order-page">
+    <main id="main-content" tabindex="-1">
+        <section class="order-section">
             <div class="container">
-                <div class="order-grid">
+                <div class="order-layout">
                     <div class="order-menu">
-                        <div class="order-category">
-                            <h3>Popular Dishes</h3>
+                        <h2>Available Dishes</h2>
+                        <div class="order-items">
                             <div class="order-item">
-                                <div class="order-item-info">
-                                    <h4>Tagliatelle al Tartufo <i class="fas fa-leaf" title="Vegetarian"></i></h4>
-                                    <p>Homemade pasta, black truffle cream.</p>
-                                    <span class="price">$24</span>
+                                <div class="order-item-content">
+                                    <h4>Tagliatelle al Tartufo</h4>
+                                    <p>Hand-rolled pasta, truffle butter, shaved Umbrian truffles. The pasta is made this morning.</p>
                                 </div>
-                                <button class="btn-add" aria-label="Add Tagliatelle al Tartufo to Order">Add to Order</button>
+                                <div class="order-item-actions">
+                                    <span class="price">$38</span>
+                                    <button class="btn-add" aria-label="Add Tagliatelle al Tartufo to order">Add</button>
+                                </div>
                             </div>
                             <div class="order-item">
-                                <div class="order-item-info">
+                                <div class="order-item-content">
                                     <h4>Lasagna alla Bolognese</h4>
-                                    <p>Layers of pasta, meat ragu, mozzarella.</p>
-                                    <span class="price">$22</span>
+                                    <p>Layers of fresh pasta, slow-cooked ragù, béchamel. A classic, done right.</p>
                                 </div>
-                                <button class="btn-add" aria-label="Add Lasagna alla Bolognese to Order">Add to Order</button>
+                                <div class="order-item-actions">
+                                    <span class="price">$32</span>
+                                    <button class="btn-add" aria-label="Add Lasagna alla Bolognese to order">Add</button>
+                                </div>
                             </div>
                             <div class="order-item">
-                                <div class="order-item-info">
-                                    <h4>Pizza Margherita <i class="fas fa-leaf" title="Vegetarian"></i></h4>
-                                    <p>Fresh tomato sauce, mozzarella, basil.</p>
-                                    <span class="price">$18</span>
+                                <div class="order-item-content">
+                                    <h4>Branzino al Cartoccio</h4>
+                                    <p>Mediterranean sea bass, baked in parchment with olives, capers, cherry tomatoes. Bright, clean, perfect.</p>
                                 </div>
-                                <button class="btn-add" aria-label="Add Pizza Margherita to Order">Add to Order</button>
+                                <div class="order-item-actions">
+                                    <span class="price">$44</span>
+                                    <button class="btn-add" aria-label="Add Branzino al Cartoccio to order">Add</button>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-content">
+                                    <h4>Tiramisù</h4>
+                                    <p>Espresso-soaked savoiardi, mascarpone, cocoa. Made fresh every morning. No shortcuts.</p>
+                                </div>
+                                <div class="order-item-actions">
+                                    <span class="price">$18</span>
+                                    <button class="btn-add" aria-label="Add Tiramisù to order">Add</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -84,31 +115,56 @@
                     <div class="order-summary">
                         <h3>Your Order</h3>
                         <div class="cart-items">
-                            <p class="empty-msg">Your cart is currently empty.</p>
+                            <p class="empty-msg">Your cart is currently empty. Add some dishes above.</p>
                         </div>
                         <div class="cart-total">
                             <span>Total:</span>
                             <span>$0.00</span>
                         </div>
-                        <button class="btn-primary full-width" onclick="location.href='success.html'" aria-label="Proceed to Checkout">Checkout</button>
+                        <button id="checkout-btn" type="button" class="btn-primary" style="width: 100%;">Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+    <!-- Footer -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">La Dolce Vita</a>
+                    <p>Tuscan dining since 1985. Pasta rolled by hand each morning, estate wines, and a room that feels looked after.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Visit</h4>
+                    <p>123 Via Roma, Culinary District</p>
+                    <p>(555) 123-4567</p>
+                    <p>Tue–Sun · 5–10pm</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="menu.html" class="footer-link">The Menu</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="reservations.html" class="footer-link">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Takeaway</h4>
+                    <ul class="footer-links">
+                        <li><a href="order.html" class="footer-link">Order for pickup</a></li>
+                        <li><a href="checkout.html" class="footer-link">Checkout</a></li>
+                    </ul>
+                </div>
             </div>
-            <p>&copy; 2026 La Dolce Vita. All rights reserved.</p>
+            <div class="footer-legal">
+                <span>© 2026 La Dolce Vita · Lucca, Tuscany</span>
+                <span>Pasta rolled by hand each morning · Sauce simmers from noon</span>
+            </div>
         </div>
     </footer>
 
     <script type="module" src="js/script.js"></script>
-    <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 </body>
 </html>

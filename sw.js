@@ -1,18 +1,20 @@
-const CACHE_NAME = 'ldv-v2.0.0';
+const CACHE_NAME = 'ldv-v2.1.0';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/menu.html',
-  '/reservations.html',
-  '/gallery.html',
-  '/order.html',
-  '/success.html',
-  '/404.html',
-  '/offline.html',
-  '/css/style.css',
-  '/js/script.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
-  'https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap'
+  './',
+  './index.html',
+  './menu.html',
+  './reservations.html',
+  './gallery.html',
+  './order.html',
+  './checkout.html',
+  './success.html',
+  './404.html',
+  './offline.html',
+  './css/style.css',
+  './js/script.js',
+  './js/checkout.js',
+  './vendor/fontawesome/css/all.min.css',
+  './fonts/ldv-fonts.css'
 ];
 
 self.addEventListener('install', (event) => {
@@ -48,7 +50,7 @@ self.addEventListener('fetch', (event) => {
   // Skip external API calls
   if (event.request.url.includes('/api/')) return;
 
-  // Handle Images (Unsplash, etc.)
+  // Handle remote image requests
   if (event.request.destination === 'image') {
     event.respondWith(
       caches.open(IMAGE_CACHE_NAME).then((cache) => {
@@ -88,7 +90,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         // Return offline page for navigation requests
         if (event.request.destination === 'document') {
-          return caches.match('/offline.html');
+          return caches.match('./offline.html');
         }
       });
     })

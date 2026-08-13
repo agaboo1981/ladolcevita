@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ladolcevita.com/sitemap.xml
+Sitemap: https://ladolcevita-seven.vercel.app/sitemap.xml
