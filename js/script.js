@@ -1,5 +1,9 @@
 const CART_STORAGE_KEY = 'ldv-cart';
 
+// Mark JS as available so the scroll-reveal only hides content when JS runs
+// (a no-JS load shows everything; reduced-motion is forced visible in CSS).
+document.documentElement.classList.add('js');
+
 const normalizeApiBase = (value) => value.replace(/\/+$/, '');
 
 const getConfiguredApiBase = () => {
@@ -526,7 +530,7 @@ const bindOrderCart = () => {
                 <div class="cart-item-row__actions">
                     <span class="cart-item-row__line-total">$${(item.price * item.qty).toFixed(2)}</span>
                     <button class="btn-remove" data-item-id="${item.id}" aria-label="Remove ${item.name}">
-                        <i class="fas fa-trash"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
                     </button>
                 </div>
             </div>

@@ -7,53 +7,48 @@
     <meta name="description" content="Seasonal Italian dishes made with fresh pasta, estate wines, and ingredients sourced from local farmers.">
     <link rel="stylesheet" href="fonts/ldv-fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+
 </head>
 <body>
     <a href="#main-content" class="skip-to-content">Skip to content</a>
-    <div id="preloader"><i class="fas fa-utensils loader-icon"></i></div>
 
     <!-- Header Navigation -->
         <!-- Header Navigation -->
         <!-- Floating menu-card header -->
-    <header id="navbar">
+        <header id="navbar">
         <div class="masthead">
             <a href="index.html" class="brand" aria-label="La Dolce Vita — home">
                 <span class="brand-seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 21v-9" />
-                        <path d="M12 12c-2.4 0-4-1.5-4-4 2.4 0 4 1.5 4 4z" />
-                        <path d="M12 12c2.4 0 4-1.5 4-4-2.4 0-4 1.5-4 4z" />
-                        <path d="M12 16c-2 0-3.4-1.3-3.4-3.2 2 0 3.4 1.3 3.4 3.2z" />
-                    </svg></span>
+                    <path d="M12 21v-9"/>
+                    <path d="M12 12c-2.4 0-4-1.5-4-4 2.4 0 4 1.5 4 4z"/>
+                    <path d="M12 12c2.4 0 4-1.5 4-4-2.4 0-4 1.5-4 4z"/>
+                    <path d="M12 16c-2 0-3.4-1.3-3.4-3.2 2 0 3.4 1.3 3.4 3.2z"/>
+                </svg></span>
                 <span class="brand-text">
                     <span class="brand-name">La Dolce Vita</span>
-                    <span class="brand-tag">Tuscan Dining Salon</span>
+                    <span class="brand-tag">Tuscan Dining Salon · Est. 1985</span>
                 </span>
             </a>
 
             <nav class="nav-index" aria-label="Primary">
-                    <a href="index.html#home" class="nav-item"><span class="nav-num">01</span><span class="nav-label">Home</span></a>
-                    <a href="menu.html" class="nav-item active"><span class="nav-num">02</span><span class="nav-label">Menu</span></a>
-                    <a href="gallery.html" class="nav-item"><span class="nav-num">03</span><span class="nav-label">Gallery</span></a>
-                    <a href="order.html" class="nav-item"><span class="nav-num">04</span><span class="nav-label">Order</span></a>
+                <a href="menu.html" class="nav-item active">Menu</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="order.html" class="nav-item">Order</a>
             </nav>
 
             <div class="header-actions">
-                <span class="hours-chip" aria-hidden="true"><span class="dot"></span>Tue–Sun · 5–10pm</span>
-                <a href="reservations.html" class="btn-reserve">Reserve <span class="arrow">&rarr;</span></a>
-                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
+                <span class="hours-chip"><span class="dot"></span>Tue–Sun · 5–10pm</span>
+                <a href="reservations.html" class="btn-reserve">Reserve a table <span class="arrow">→</span></a>
+                <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
 
         <div class="mobile-menu">
             <ul>
-                <li><a href="index.html#home" class="nav-item-m"><span class="m-num">01</span>Home</a></li>
-                <li><a href="menu.html" class="nav-item-m active"><span class="m-num">02</span>Menu</a></li>
-                <li><a href="gallery.html" class="nav-item-m"><span class="m-num">03</span>Gallery</a></li>
-                <li><a href="order.html" class="nav-item-m"><span class="m-num">04</span>Order</a></li>
-                <li><a href="reservations.html" class="mobile-btn-reserve">Reserve a Table</a></li>
+                <li><a href="menu.html" class="nav-item-m active">Menu</a></li>
+                <li><a href="gallery.html" class="nav-item-m">Gallery</a></li>
+                <li><a href="order.html" class="nav-item-m">Order</a></li>
+                <li><a href="reservations.html" class="mobile-btn-reserve">Reserve a table</a></li>
             </ul>
         </div>
     </header>
@@ -79,21 +74,21 @@
         <!-- Antipasti -->
         <section class="menu-section">
             <div class="container">
-                <h2>Antipasti</h2>
+                <h2 data-course="I">Antipasti</h2>
                 <div class="menu-items">
                     <div class="menu-item" data-diet="vegetarian">
                         <div class="menu-item-content">
                             <h3>Bruschetta al Pomodoro</h3>
                             <p>Toasted sourdough, vine-ripened tomatoes, garlic oil, aged saba. Simple, perfect.</p>
                         </div>
-                        <span class="menu-item-price">$16</span>
+                        <span class="menu-item-price">$16</span><span class="diet">v</span>
                     </div>
                     <div class="menu-item" data-diet="vegetarian">
                         <div class="menu-item-content">
                             <h3>Burrata con Fichi</h3>
                             <p>Creamy burrata, caramelized figs, prosciutto di Parma. A study in sweet and salt.</p>
                         </div>
-                        <span class="menu-item-price">$22</span>
+                        <span class="menu-item-price">$22</span><span class="diet">v</span>
                     </div>
                 </div>
             </div>
@@ -102,21 +97,21 @@
         <!-- Primi -->
         <section class="menu-section menu-section--alt">
             <div class="container">
-                <h2>Primi</h2>
+                <h2 data-course="II">Primi</h2>
                 <div class="menu-items">
                     <div class="menu-item" data-diet="vegetarian">
                         <div class="menu-item-content">
                             <h3>Tagliatelle al Tartufo</h3>
                             <p>Hand-rolled egg pasta, truffle butter, shaved Umbrian truffles. The pasta is made this morning.</p>
                         </div>
-                        <span class="menu-item-price">$38</span>
+                        <span class="menu-item-price">$38</span><span class="diet">v</span>
                     </div>
                     <div class="menu-item" data-diet="vegetarian">
                         <div class="menu-item-content">
                             <h3>Gnocchi Cacio e Pepe</h3>
                             <p>Pillowy potato gnocchi, pecorino romano, toasted black pepper. A Roman classic, done right.</p>
                         </div>
-                        <span class="menu-item-price">$32</span>
+                        <span class="menu-item-price">$32</span><span class="diet">v</span>
                     </div>
                 </div>
             </div>
@@ -125,21 +120,21 @@
         <!-- Secondi -->
         <section class="menu-section">
             <div class="container">
-                <h2>Secondi</h2>
+                <h2 data-course="III">Secondi</h2>
                 <div class="menu-items">
                     <div class="menu-item" data-diet="gluten-free">
                         <div class="menu-item-content">
                             <h3>Filetto di Manzo</h3>
                             <p>Grass-fed beef tenderloin, Chianti reduction, roasted sunchokes. Cooked exactly how you like it.</p>
                         </div>
-                        <span class="menu-item-price">$48</span>
+                        <span class="menu-item-price">$48</span><span class="diet">gf</span>
                     </div>
                     <div class="menu-item" data-diet="pescatarian gluten-free">
                         <div class="menu-item-content">
                             <h3>Branzino al Cartoccio</h3>
                             <p>Mediterranean sea bass, baked in parchment with olives, capers, cherry tomatoes. Bright, clean, perfect.</p>
                         </div>
-                        <span class="menu-item-price">$44</span>
+                        <span class="menu-item-price">$44</span><span class="diet">p</span><span class="diet">gf</span>
                     </div>
                 </div>
             </div>
@@ -148,32 +143,48 @@
         <!-- Dolci -->
         <section class="menu-section menu-section--alt">
             <div class="container">
-                <h2>Dolci</h2>
+                <h2 data-course="IV">Dolci</h2>
                 <div class="menu-items">
                     <div class="menu-item" data-diet="vegetarian">
                         <div class="menu-item-content">
                             <h3>Tiramisu</h3>
                             <p>Espresso-soaked ladyfingers, mascarpone, cocoa. Made fresh every morning. No shortcuts.</p>
                         </div>
-                        <span class="menu-item-price">$14</span>
+                        <span class="menu-item-price">$14</span><span class="diet">v</span>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Menu colophon -->
+        <div class="menu-colophon">
+            <dl>
+                <div><dt>Served</dt><dd>Nightly · 5–10pm · last order 9:30</dd></div>
+                <div><dt>Wine</dt><dd>By the glass &amp; by the bottle</dd></div>
+                <div><dt>Corkage</dt><dd>$30 per bottle</dd></div>
+            </dl>
+            <div class="diet-legend">
+                <span><b>v</b> vegetarian</span>
+                <span><b>p</b> pescatarian</span>
+                <span><b>gf</b> gluten-free</span>
+            </div>
+            <p>Whatever you can’t eat, tell us — we adjust quietly. A full allergen guide is on request, and nothing leaves the pass until it’s right.</p>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+        <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
                     <a href="index.html" class="footer-logo">La Dolce Vita</a>
-                    <p>Authentic Italian cuisine since 1985. Seasonal menus, estate wines, and candlelit hospitality.</p>
+                    <p>Tuscan dining since 1985. Pasta rolled by hand each morning, estate wines, and a room that feels looked after.</p>
                 </div>
                 <div class="footer-links-col">
                     <h4>Visit</h4>
                     <p>123 Via Roma, Culinary District</p>
                     <p>(555) 123-4567</p>
+                    <p>Tue–Sun · 5–10pm</p>
                 </div>
                 <div class="footer-links-col">
                     <h4>Explore</h4>
@@ -184,16 +195,16 @@
                     </ul>
                 </div>
                 <div class="footer-links-col">
-                    <h4>Online Orders</h4>
+                    <h4>Takeaway</h4>
                     <ul class="footer-links">
-                        <li><a href="order.html" class="footer-link">Order Online</a></li>
+                        <li><a href="order.html" class="footer-link">Order for pickup</a></li>
                         <li><a href="checkout.html" class="footer-link">Checkout</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-legal">
-                <span>&copy; 2026 La Dolce Vita. All rights reserved.</span>
-                <span>Valet parking available. Elegant Casual dress code.</span>
+                <span>© 2026 La Dolce Vita · Lucca, Tuscany</span>
+                <span>Pasta rolled by hand each morning · Sauce simmers from noon</span>
             </div>
         </div>
     </footer>
