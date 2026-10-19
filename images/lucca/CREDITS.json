@@ -1,0 +1,86 @@
+[
+  {
+    "id": "lucca-walls",
+    "file": "lucca-walls.jpg",
+    "title": "File:Mura di Lucca.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Mura_di_Lucca.jpg/3840px-Mura_di_Lucca.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 2400,
+    "height": 1600,
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "AndreCollodi",
+    "page": "https://commons.wikimedia.org/wiki/File:Mura_di_Lucca.jpg"
+  },
+  {
+    "id": "lucca-walls-dusk",
+    "file": "lucca-walls-dusk.jpg",
+    "title": "File:Sulle mura di Lucca al tramonto.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Sulle_mura_di_Lucca_al_tramonto.jpg/3840px-Sulle_mura_di_Lucca_al_tramonto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 2400,
+    "height": 1800,
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Pepeina8",
+    "page": "https://commons.wikimedia.org/wiki/File:Sulle_mura_di_Lucca_al_tramonto.jpg"
+  },
+  {
+    "id": "lucca-anfiteatro",
+    "file": "lucca-anfiteatro.jpg",
+    "title": "File:Piazza dell' Anfiteatro- Amphitheater - Lucca - panoramio.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Piazza_dell%27_Anfiteatro-_Amphitheater_-_Lucca_-_panoramio.jpg/3840px-Piazza_dell%27_Anfiteatro-_Amphitheater_-_Lucca_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 2400,
+    "height": 1523,
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "artist": "qwesy qwesy",
+    "page": "https://commons.wikimedia.org/wiki/File:Piazza_dell%27_Anfiteatro-_Amphitheater_-_Lucca_-_panoramio.jpg"
+  },
+  {
+    "id": "lucca-tower",
+    "file": "lucca-tower.jpg",
+    "title": "File:Lucca - Torre Guinigi from Campanile.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Lucca_-_Torre_Guinigi_from_Campanile.jpg/3840px-Lucca_-_Torre_Guinigi_from_Campanile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 2400,
+    "height": 1600,
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Ingo Mehling",
+    "page": "https://commons.wikimedia.org/wiki/File:Lucca_-_Torre_Guinigi_from_Campanile.jpg"
+  },
+  {
+    "id": "lucca-rooftops",
+    "file": "lucca-rooftops.jpg",
+    "title": "File:Lucca Panorama.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Lucca_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 2400,
+    "height": 1349,
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Pietro Colnago",
+    "page": "https://commons.wikimedia.org/wiki/File:Lucca_Panorama.jpg"
+  },
+  {
+    "id": "lucca-street",
+    "file": "lucca-street.jpg",
+    "title": "File:Lucca, Via Fillungo (1).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lucca%2C_Via_Fillungo_%281%29.jpg/3840px-Lucca%2C_Via_Fillungo_%281%29.jpg",
+    "width": 3840,
+    "height": 2880,
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Palickap",
+    "page": "https://commons.wikimedia.org/wiki/File:Lucca,_Via_Fillungo_(1).jpg"
+  },
+  {
+    "id": "lucca-night",
+    "file": "lucca-night.jpg",
+    "title": "File:Mura di Lucca in notturna.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Mura_di_Lucca_in_notturna.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 2400,
+    "height": 1539,
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Marcolione",
+    "page": "https://commons.wikimedia.org/wiki/File:Mura_di_Lucca_in_notturna.jpg"
+  }
+]

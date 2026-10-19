@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations · La Dolce Vita, Lucca</title>
+  <meta name="description" content="Book a table at La Dolce Vita in Lucca. Dinner Tuesday to Sunday, 17:00 to 22:00. Check tonight's times live, then send your request.">
+  <link rel="stylesheet" href="fonts/ldv-fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#131110">
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <header class="site-head" id="siteHead">
+    <div class="shell">
+      <a class="wordmark" href="index.html">La Dolce Vita</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="reservations.html" aria-current="page">Reservations</a>
+      </nav>
+      <div class="head-cta">
+        <a class="btn" href="order.html">Order to collect</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-drawer" id="drawer">
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="order.html">Order</a>
+      <a href="reservations.html">Reservations</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro field-dark">
+      <div class="shell">
+        <h1 class="rise">Find a table.</h1>
+        <p class="lead rise">Forty-four seats, six nights a week. We will hold a table for you.</p>
+      </div>
+    </section>
+
+    <div class="field-light section">
+      <div class="shell">
+        <div class="res-layout">
+          <div>
+            <h2 class="rise">Where would you like to sit?</h2>
+            <div class="zone-row rise" role="group" aria-label="Choose a table">
+              <button type="button" class="zone rise" data-zone="Main room" aria-selected="true">
+                <span class="zone-name">The main room</span>
+                <span class="zone-cap">28 seats · the whole evening</span>
+              </button>
+              <button type="button" class="zone rise" data-zone="Chef's counter" aria-selected="false">
+                <span class="zone-name">The chef's counter</span>
+                <span class="zone-cap">6 seats · you watch it being made</span>
+              </button>
+              <button type="button" class="zone rise" data-zone="Wine cellar" aria-selected="false">
+                <span class="zone-name">The wine cellar</span>
+                <span class="zone-cap">10 seats · downstairs, quiet</span>
+              </button>
+            </div>
+
+            <h2 class="rise">Your details</h2>
+            <form id="reservation-form" class="form rise" novalidate>
+              <input type="hidden" id="res-zone" name="zone" value="Main room">
+              <div class="form-2">
+                <div>
+                  <label for="res-name">Name</label>
+                  <input type="text" id="res-name" name="name" autocomplete="name" required placeholder="Alessandro Rossi">
+                </div>
+                <div>
+                  <label for="res-email">Email</label>
+                  <input type="email" id="res-email" name="email" autocomplete="email" required placeholder="alessandro@example.com">
+                </div>
+              </div>
+              <div class="form-2">
+                <div>
+                  <label for="res-date">Date</label>
+                  <input type="date" id="res-date" name="date" required>
+                </div>
+                <div>
+                  <label for="res-guests">Guests</label>
+                  <select id="res-guests" name="partySize">
+                    <option value="1">1 guest</option>
+                    <option value="2" selected>2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5 guests</option>
+                    <option value="6">6 guests</option>
+                    <option value="7">7 guests</option>
+                    <option value="8">8 guests</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="res-phone">Phone</label>
+                <input type="tel" id="res-phone" name="phone" autocomplete="tel" required placeholder="+39 0583 123 456">
+              </div>
+              <div>
+                <span class="form-label">Time</span>
+                <div class="slots" id="slots"></div>
+                <p class="slots-note" id="slotsNote">Checking tonight's kitchen…</p>
+                <p class="note">The times are sample availability for this demo.</p>
+              </div>
+              <div>
+                <label for="res-requests">Anything we should know?</label>
+                <textarea id="res-requests" name="requests" rows="3" placeholder="Allergies, a birthday, a quiet corner…"></textarea>
+              </div>
+              <button type="submit" class="btn">Send the request</button>
+            </form>
+          </div>
+
+          <aside class="res-side rise">
+            <h2>Before you come</h2>
+            <div class="info rise">
+              <h3>Hours</h3>
+              <p>Tuesday to Sunday, 17:00 – 22:00. Closed on Mondays. The kitchen takes its last order at 21:30.</p>
+            </div>
+            <div class="info rise">
+              <h3>Larger tables</h3>
+              <p>We book up to eight seats online. For nine or more, call us on +39 0583 123 456 and we will find you a corner.</p>
+            </div>
+            <div class="info rise">
+              <h3>Changing your mind</h3>
+              <p>Tell us a day before if you can. The room is small and a table held is a table nobody else can have.</p>
+            </div>
+            <div class="info rise">
+              <h3>How to dress</h3>
+              <p>Come as you are. People arrive here straight off the walls, in walking shoes.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <section class="section field-dark">
+      <div class="shell">
+        <h2 class="rise">Where we are.</h2>
+        <p class="lead rise menu-lead">The middle of the walled city. Everything below is inside a twenty-minute walk.</p>
+        <div class="band">
+          <figure class="rise">
+            <img src="images/build/restaurant_interior-fallback.jpg" srcset="images/build/restaurant_interior-640.webp 640w, images/build/restaurant_interior-800.webp 800w, images/build/restaurant_interior-1024.webp 1024w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="The candle-lit dining room">
+            <figcaption class="rise">The room, before the candles are lit.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/lucca-walls-fallback.jpg" srcset="images/build/lucca-walls-800.webp 800w, images/build/lucca-walls-1400.webp 1400w" sizes="(max-width: 960px) 45vw, 22vw" width="1400" height="933" loading="lazy" decoding="async" alt="The walls and ramparts of Lucca">
+            <figcaption class="rise">The walls: four kilometres of them, all walkable.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/lucca-anfiteatro-fallback.jpg" srcset="images/build/lucca-anfiteatro-800.webp 800w, images/build/lucca-anfiteatro-1400.webp 1400w" sizes="(max-width: 960px) 45vw, 22vw" width="1400" height="889" loading="lazy" decoding="async" alt="Piazza dell'Anfiteatro in Lucca">
+            <figcaption class="rise">Piazza dell'Anfiteatro, built on a Roman arena.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/lucca-tower-fallback.jpg" srcset="images/build/lucca-tower-800.webp 800w, images/build/lucca-tower-1400.webp 1400w" sizes="(max-width: 960px) 45vw, 22vw" width="1400" height="933" loading="lazy" decoding="async" alt="Torre Guinigi rising above the rooftops">
+            <figcaption class="rise">The Guinigi tower has trees growing on top of it.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot field-dark">
+    <div class="shell">
+      <div class="foot-card rise">
+        <div class="foot-grid">
+          <div>
+            <h2>A domani.</h2>
+            <p>We keep a few tables back for people who walk in. If the door is shut, ring the bell; someone is always in the kitchen.</p>
+          </div>
+          <div class="foot-lines">
+            <a href="mailto:ciao@ladolcevita.example">ciao@ladolcevita.example</a>
+            <a href="tel:+390583123456">+39 0583 123 456</a>
+            <a href="https://maps.google.com/?q=Via+Fillungo+42+Lucca">Via Fillungo 42, 55100 Lucca</a>
+            <div class="foot-stamp">
+              <img src="images/build/lucca-walls-dusk-fallback.jpg" srcset="images/build/lucca-walls-dusk-640.webp 640w" sizes="96px" width="96" height="128" loading="lazy" decoding="async" alt="The walls of Lucca at dusk">
+            </div>
+          </div>
+        </div>
+        <div class="foot-imprint">
+          <span>© 2026 La Dolce Vita, Lucca</span>
+          <span class="foot-credit">Photographs of Lucca from Wikimedia Commons (CC BY / CC BY-SA): AndreCollodi, Pepeina8, qwesy qwesy, Palickap, Ingo Mehling, Pietro Colnago, Marcolione.</span>
+        </div>
+          <p class="foot-note">La Dolce Vita is a fictional restaurant, built as a portfolio demo. The menu, prices, hours and availability are sample content. The photographs of Lucca are real, and credited below.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>

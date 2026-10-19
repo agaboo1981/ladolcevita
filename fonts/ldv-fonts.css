@@ -1,0 +1,19 @@
+/* La Dolce Vita, self-hosted type.
+   One face: Switzer (Indian Type Foundry, free for commercial use, Fontshare).
+   Licensed under the Fontshare/ITF Free Font License. */
+
+@font-face {
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./Switzer-400.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./Switzer-500.woff2) format('woff2');
+}

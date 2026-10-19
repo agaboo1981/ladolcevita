@@ -1,0 +1,30 @@
+{
+  "name": "La Dolce Vita, Lucca",
+  "short_name": "La Dolce Vita",
+  "description": "A fictional trattoria inside the walls of Lucca, built as a portfolio piece.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#131110",
+  "theme_color": "#131110",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

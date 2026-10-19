@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order to collect · La Dolce Vita, Lucca</title>
+  <meta name="description" content="Order from La Dolce Vita in Lucca and collect it at the door on Via Fillungo. Pasta, secondi, and dolci, packed to travel.">
+  <link rel="stylesheet" href="fonts/ldv-fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#131110">
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <header class="site-head" id="siteHead">
+    <div class="shell">
+      <a class="wordmark" href="index.html">La Dolce Vita</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html" aria-current="page">Order</a>
+        <a href="reservations.html">Reservations</a>
+      </nav>
+      <div class="head-cta">
+        <a class="btn" href="reservations.html">Find a table</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-drawer" id="drawer">
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="order.html">Order</a>
+      <a href="reservations.html">Reservations</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro field-dark">
+      <div class="shell">
+        <h1 class="rise">Take it home.</h1>
+        <p class="lead rise">The same dishes you would eat here, packed for the walk home.</p>
+      </div>
+    </section>
+
+    <div class="field-light section">
+      <div class="shell">
+        <div class="order-layout">
+          <div>
+            <h2 class="rise">Available today</h2>
+            <div class="order-items rise">
+              <div class="order-row rise">
+                <div>
+                  <h3>Tortelli lucchesi</h3>
+                  <p>Ricotta and herbs, butter and a spoon of ragù. This is the dish to take away if you only take one.</p>
+                </div>
+                <div class="order-row-right">
+                  <span class="dish-price num">€14</span>
+                  <button class="btn" data-add data-id="tortelli-lucchesi" data-name="Tortelli lucchesi" data-price="14">Add</button>
+                </div>
+              </div>
+              <div class="order-row rise">
+                <div>
+                  <h3>Tagliatelle al tartufo</h3>
+                  <p>Truffle butter and shaved truffle, packed with the truffle on the side so it arrives as it should.</p>
+                </div>
+                <div class="order-row-right">
+                  <span class="dish-price num">€22</span>
+                  <button class="btn" data-add data-id="tagliatelle-al-tartufo" data-name="Tagliatelle al tartufo" data-price="22">Add</button>
+                </div>
+              </div>
+              <div class="order-row rise">
+                <div>
+                  <h3>Gnocchi cacio e pepe</h3>
+                  <p>Potato gnocchi, pecorino, toasted black pepper. Give it a minute in a hot pan at home.</p>
+                </div>
+                <div class="order-row-right">
+                  <span class="dish-price num">€16</span>
+                  <button class="btn" data-add data-id="gnocchi-cacio-e-pepe" data-name="Gnocchi cacio e pepe" data-price="16">Add</button>
+                </div>
+              </div>
+              <div class="order-row rise">
+                <div>
+                  <h3>Branzino al cartoccio</h3>
+                  <p>Sea bass baked in paper with olives and capers. Travels perfectly; open it at the table.</p>
+                </div>
+                <div class="order-row-right">
+                  <span class="dish-price num">€24</span>
+                  <button class="btn" data-add data-id="branzino-al-cartoccio" data-name="Branzino al cartoccio" data-price="24">Add</button>
+                </div>
+              </div>
+              <div class="order-row rise">
+                <div>
+                  <h3>Buccellato</h3>
+                  <p>Lucca's own sweet bread, sold by the half. Best eaten the day you buy it.</p>
+                </div>
+                <div class="order-row-right">
+                  <span class="dish-price num">€7</span>
+                  <button class="btn" data-add data-id="buccellato" data-name="Buccellato" data-price="7">Add</button>
+                </div>
+              </div>
+              <div class="order-row rise">
+                <div>
+                  <h3>Tiramisù</h3>
+                  <p>Espresso, mascarpone, cocoa, in a small dish. It survives the journey better than most things.</p>
+                </div>
+                <div class="order-row-right">
+                  <span class="dish-price num">€8</span>
+                  <button class="btn" data-add data-id="tiramisu" data-name="Tiramisù" data-price="8">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="tally" id="tally"></aside>
+        </div>
+      </div>
+    </div>
+
+    <section class="section field-dark">
+      <div class="shell">
+        <h2 class="rise">What travels well.</h2>
+        <p class="lead rise menu-lead">Four things that arrive as they left.</p>
+        <div class="band">
+          <figure class="rise">
+            <img src="images/build/dishes_spread-fallback.jpg" srcset="images/build/dishes_spread-640.webp 640w, images/build/dishes_spread-800.webp 800w, images/build/dishes_spread-1024.webp 1024w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="Dishes set out together on a dark table">
+            <figcaption class="rise">A whole dinner, boxed and ready at the door.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/chiaroscuro_pasta-fallback.jpg" srcset="images/build/chiaroscuro_pasta-640.webp 640w, images/build/chiaroscuro_pasta-800.webp 800w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="Fresh pasta in a bowl in low light">
+            <figcaption class="rise">Pasta is cooked to just under, so it finishes at your table.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/plating_dish-fallback.jpg" srcset="images/build/plating_dish-640.webp 640w, images/build/plating_dish-800.webp 800w, images/build/plating_dish-1024.webp 1024w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="A plate being finished by hand at the pass">
+            <figcaption class="rise">Everything is plated at the pass first, then packed.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/tiramisu-fallback.jpg" srcset="images/build/tiramisu-640.webp 640w, images/build/tiramisu-800.webp 800w, images/build/tiramisu-1024.webp 1024w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="Tiramisu on a slate plate">
+            <figcaption class="rise">Tiramisù, in the dish it was made in.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot field-dark">
+    <div class="shell">
+      <div class="foot-card rise">
+        <div class="foot-grid">
+          <div>
+            <h2>A domani.</h2>
+            <p>We keep a few tables back for people who walk in. If the door is shut, ring the bell; someone is always in the kitchen.</p>
+          </div>
+          <div class="foot-lines">
+            <a href="mailto:ciao@ladolcevita.example">ciao@ladolcevita.example</a>
+            <a href="tel:+390583123456">+39 0583 123 456</a>
+            <a href="https://maps.google.com/?q=Via+Fillungo+42+Lucca">Via Fillungo 42, 55100 Lucca</a>
+            <div class="foot-stamp">
+              <img src="images/build/lucca-walls-dusk-fallback.jpg" srcset="images/build/lucca-walls-dusk-640.webp 640w" sizes="96px" width="96" height="128" loading="lazy" decoding="async" alt="The walls of Lucca at dusk">
+            </div>
+          </div>
+        </div>
+        <div class="foot-imprint">
+          <span>© 2026 La Dolce Vita, Lucca</span>
+          <span class="foot-credit">Photographs of Lucca from Wikimedia Commons (CC BY / CC BY-SA): AndreCollodi, Pepeina8, qwesy qwesy, Palickap, Ingo Mehling, Pietro Colnago, Marcolione.</span>
+        </div>
+          <p class="foot-note">La Dolce Vita is a fictional restaurant, built as a portfolio demo. The menu, prices, hours and availability are sample content. The photographs of Lucca are real, and credited below.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>

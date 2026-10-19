@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ladolcevita-seven.vercel.app/sitemap.xml

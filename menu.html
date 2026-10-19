@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu · La Dolce Vita, Lucca</title>
+  <meta name="description" content="The menu at La Dolce Vita in Lucca: tortelli lucchesi, farro soup, buccellato, and wine from the hills. Cooked Tuesday to Sunday, dinner from 17:00.">
+  <link rel="stylesheet" href="fonts/ldv-fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#131110">
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <header class="site-head" id="siteHead">
+    <div class="shell">
+      <a class="wordmark" href="index.html">La Dolce Vita</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="menu.html" aria-current="page">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="reservations.html">Reservations</a>
+      </nav>
+      <div class="head-cta">
+        <a class="btn" href="reservations.html">Find a table</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-drawer" id="drawer">
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="order.html">Order</a>
+      <a href="reservations.html">Reservations</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro field-dark">
+      <div class="shell">
+        <h1 class="rise">The menu.</h1>
+        <p class="lead rise">We cook what this city cooks: pasta rolled in the morning, farro from the hills, oil from the plain.</p>
+      </div>
+    </section>
+
+    <div class="field-light menu-page">
+      <div class="shell">
+        <div class="menu-filter rise" role="group" aria-label="Filter the menu by what you can eat">
+          <button class="chip" data-filter="all" aria-pressed="true">Everything</button>
+          <button class="chip" data-filter="vegetarian" aria-pressed="false">Vegetarian</button>
+          <button class="chip" data-filter="pescatarian" aria-pressed="false">Pescatarian</button>
+          <button class="chip" data-filter="gluten-free" aria-pressed="false">Gluten-free</button>
+        </div>
+
+        <section class="course">
+          <h2 class="rise">Antipasti</h2>
+          <div class="dishes rise">
+            <div class="dish" data-diet="none">
+              <div class="dish-main">
+                <h3>Crostini di fegatini</h3>
+                <p>Chicken-liver pâté on our own bread, made the old Tuscan way with capers and a little Vin Santo.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€8</span>
+                <button class="dish-pair" data-open-wine data-wine-name="A white from the Lucca hills" data-wine-note="Something crisp and dry, from vineyards you can walk to in an afternoon. It cuts the liver and does not argue with it.">Pairing</button>
+              </div>
+            </div>
+            <div class="dish" data-diet="vegetarian">
+              <div class="dish-main">
+                <h3>Farro e fagioli</h3>
+                <p>Farro and bean soup, the winter dish of the hills. Thick, plain, finished with new oil.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€9</span>
+                <button class="dish-pair" data-open-wine data-wine-name="The house red, by the glass" data-wine-note="A young Sangiovese, poured from the jug. It is what we drink with this soup ourselves.">Pairing</button>
+              </div>
+            </div>
+            <div class="dish" data-diet="vegetarian">
+              <div class="dish-main">
+                <h3>Burrata con pomodori</h3>
+                <p>Burrata from the market, tomatoes, basil, and oil pressed in the plain below the walls.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€12</span>
+                <button class="dish-pair" data-open-wine data-wine-name="Vermentino, Tuscan coast" data-wine-note="Salty and light. It is the wine we open first on a warm evening, before anyone has decided anything.">Pairing</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="course">
+          <h2 class="rise">Primi</h2>
+          <div class="dishes rise">
+            <div class="dish" data-diet="vegetarian">
+              <div class="dish-main">
+                <h3>Tortelli lucchesi</h3>
+                <p>This city's own pasta: ricotta and herbs, closed into small parcels, finished with butter and a spoon of ragù. Two o'clock, every afternoon.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€14</span>
+                <button class="dish-pair" data-open-wine data-wine-name="Sangiovese, the Lucca hills" data-wine-note="The local red. Bright, a little dusty, made for butter and ricotta.">Pairing</button>
+              </div>
+            </div>
+            <div class="dish" data-diet="vegetarian">
+              <div class="dish-main">
+                <h3>Tagliatelle al tartufo</h3>
+                <p>Hand-rolled egg pasta, truffle butter, truffle shaved over the plate at the table.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€22</span>
+                <button class="dish-pair" data-open-wine data-wine-name="A glass of something older" data-wine-note="When the truffle is good we pour a fuller red, a few years in the bottle, from the hills on the other side of the plain.">Pairing</button>
+              </div>
+            </div>
+            <div class="dish" data-diet="vegetarian">
+              <div class="dish-main">
+                <h3>Gnocchi cacio e pepe</h3>
+                <p>Potato gnocchi, pecorino, black pepper toasted in the pan. A Roman dish, cooked here without fuss.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€16</span>
+                <button class="dish-pair" data-open-wine data-wine-name="A white with some weight" data-wine-note="Pecorino wants a white that can stand up to it. We keep one cold for exactly this.">Pairing</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="course">
+          <h2 class="rise">Secondi</h2>
+          <div class="dishes rise">
+            <div class="dish" data-diet="gluten-free">
+              <div class="dish-main">
+                <h3>Coniglio alla lucchese</h3>
+                <p>Rabbit braised with olives, rosemary, and white wine. The dish this city has been cooking for centuries.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€20</span>
+                <button class="dish-pair" data-open-wine data-wine-name="A red with a little age" data-wine-note="Rabbit and rosemary need a red that has settled down. We keep a few bottles back for it.">Pairing</button>
+              </div>
+            </div>
+            <div class="dish" data-diet="pescatarian gluten-free">
+              <div class="dish-main">
+                <h3>Branzino al cartoccio</h3>
+                <p>Sea bass baked in paper with olives, capers, and cherry tomatoes. It arrives at the table still folded shut.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€24</span>
+                <button class="dish-pair" data-open-wine data-wine-name="Vermentino again, colder" data-wine-note="Sea bass and capers, and the same coastal white, poured colder than the first glass.">Pairing</button>
+              </div>
+            </div>
+            <div class="dish" data-diet="gluten-free">
+              <div class="dish-main">
+                <h3>Filetto di manzo</h3>
+                <p>Grass-fed beef, a Chianti reduction, roast potatoes from the market. Cooked exactly as you ask.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€26</span>
+                <button class="dish-pair" data-open-wine data-wine-name="A fuller Sangiovese" data-wine-note="For the beef we go a step up: the same grape, more sun, more time in the barrel.">Pairing</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="course">
+          <h2 class="rise">Dolci</h2>
+          <div class="dishes rise">
+            <div class="dish" data-diet="vegetarian">
+              <div class="dish-main">
+                <h3>Buccellato</h3>
+                <p>Lucca's own sweet bread, warm from the oven, with raisins and a glass of Vin Santo if you like.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€7</span>
+                <button class="dish-pair" data-open-wine data-wine-name="Vin Santo" data-wine-note="Sweet, amber, made from dried grapes. This is the pairing Lucca would choose for you.">Pairing</button>
+              </div>
+            </div>
+            <div class="dish" data-diet="vegetarian">
+              <div class="dish-main">
+                <h3>Tiramisù</h3>
+                <p>Espresso-soaked savoiardi, mascarpone, cocoa. Made in the morning and left to settle.</p>
+              </div>
+              <div class="dish-side">
+                <span class="dish-price num">€8</span>
+                <button class="dish-pair" data-open-wine data-wine-name="Espresso, or a small Vin Santo" data-wine-note="We will bring you either. Both are correct at ten o'clock.">Pairing</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="menu-colophon rise">
+          <dl>
+            <div><dt>Served</dt><dd>Tuesday to Sunday, 17:00 to 22:00 · last table 21:30</dd></div>
+            <div><dt>Wine</dt><dd>By the glass, by the jug, by the bottle</dd></div>
+            <div><dt>Corkage</dt><dd>€15 per bottle if you bring your own</dd></div>
+          </dl>
+          <p>Prices are in euro and include service. Everything is cooked to order, so tell us what you cannot eat and we adjust quietly. A full allergen list is on the counter by the door.</p>
+          <p class="note">A sample menu: the dishes and the prices are illustrative content for a design demo.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section field-dark">
+      <div class="shell">
+        <h2 class="rise">From the pass.</h2>
+        <p class="lead rise menu-lead">Four plates, on a normal evening, photographed where they were made.</p>
+        <div class="band">
+          <figure class="rise">
+            <img src="images/build/dishes_spread-fallback.jpg" srcset="images/build/dishes_spread-640.webp 640w, images/build/dishes_spread-800.webp 800w, images/build/dishes_spread-1024.webp 1024w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="Several dishes set out together on a dark table">
+            <figcaption class="rise">Everything out at once, the way a family table looks.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/plating_dish-fallback.jpg" srcset="images/build/plating_dish-640.webp 640w, images/build/plating_dish-800.webp 800w, images/build/plating_dish-1024.webp 1024w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="A plate being finished by hand at the pass">
+            <figcaption class="rise">The pass at eight o'clock; nothing leaves until it is right.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/chiaroscuro_pasta-fallback.jpg" srcset="images/build/chiaroscuro_pasta-640.webp 640w, images/build/chiaroscuro_pasta-800.webp 800w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="Fresh pasta in a bowl in low light">
+            <figcaption class="rise">Pasta, rolled and cut in the morning.</figcaption>
+          </figure>
+          <figure class="rise">
+            <img src="images/build/tiramisu-fallback.jpg" srcset="images/build/tiramisu-640.webp 640w, images/build/tiramisu-800.webp 800w, images/build/tiramisu-1024.webp 1024w" sizes="(max-width: 960px) 45vw, 22vw" width="800" height="1000" loading="lazy" decoding="async" alt="Tiramisu on a slate plate">
+            <figcaption class="rise">Tiramisù, made in the morning and left to settle.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot field-dark">
+    <div class="shell">
+      <div class="foot-card rise">
+        <div class="foot-grid">
+          <div>
+            <h2>A domani.</h2>
+            <p>We keep a few tables back for people who walk in. If the door is shut, ring the bell; someone is always in the kitchen.</p>
+          </div>
+          <div class="foot-lines">
+            <a href="mailto:ciao@ladolcevita.example">ciao@ladolcevita.example</a>
+            <a href="tel:+390583123456">+39 0583 123 456</a>
+            <a href="https://maps.google.com/?q=Via+Fillungo+42+Lucca">Via Fillungo 42, 55100 Lucca</a>
+            <div class="foot-stamp">
+              <img src="images/build/lucca-walls-dusk-fallback.jpg" srcset="images/build/lucca-walls-dusk-640.webp 640w" sizes="96px" width="96" height="128" loading="lazy" decoding="async" alt="The walls of Lucca at dusk">
+            </div>
+          </div>
+        </div>
+        <div class="foot-imprint">
+          <span>© 2026 La Dolce Vita, Lucca</span>
+          <span class="foot-credit">Photographs of Lucca from Wikimedia Commons (CC BY / CC BY-SA): AndreCollodi, Pepeina8, qwesy qwesy, Palickap, Ingo Mehling, Pietro Colnago, Marcolione.</span>
+        </div>
+          <p class="foot-note">La Dolce Vita is a fictional restaurant, built as a portfolio demo. The menu, prices, hours and availability are sample content. The photographs of Lucca are real, and credited below.</p>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="drawer" id="wineDrawer" aria-hidden="true">
+    <div class="drawer-veil" data-drawer-close></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Wine pairing note">
+      <button class="drawer-close" data-drawer-close aria-label="Close">&times;</button>
+      <p class="note">The sommelier's note</p>
+      <h2 id="wineName">A glass to go with it</h2>
+      <p id="wineNote">Ask at the table and we will pour you the right one.</p>
+      <div class="drawer-tags">
+        <span>Poured by the glass</span>
+        <span>Mostly from Tuscany</span>
+        <span>Ask us anything</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
